@@ -1,0 +1,149 @@
+[
+    {
+        "Q1": "What is the difference between street-hail services and ride-hail services?",
+        "A1": "Street-hail is a service using an app while Ride-hail is a service by flagging down a vehicle by the road",
+        "A2": "Street-hail services are part of the Point-to-Point transport sector in Singapore while Ride-hail services are not",
+        "A3": "Street-hail is a service hailed by flagging down a taxi while Ride-hail is a service hailed ride-hailing app",
+        "A4": "There are no differences between the two service"
+    },
+    {
+        "Q2": "What are the two types of Point-to-Point transport services that are approved to transport passengers from a starting point to a destination point of their choice?",
+        "A1": "Street-hail and Personal Mobility Devices",
+        "A2": "Street-hail and Ride-hail",
+        "A3": "Bus-hail and MRT",
+        "A4": "Street-hail and Bus-hail"
+    },
+    {
+        "Q3": "If you provide a Point-to-point transport service as a driver, you must ___",
+        "A1": "Consume food and smoke in your car.",
+        "A2": "Challenge passengers to complain against LTA.",
+        "A3": "Start an argument with a passenger",
+        "A4": "Not do all the above"
+    },
+    {
+        "Q4": "Which of the following is part of the Point-to-Point transport sector in Singapore?",
+        "A1": "Private Hire Car Booking Service Operators",
+        "A2": "3rd Party Taxi Booking Service Operators",
+        "A3": "Private Hire Car",
+        "A4": "All of the above"
+    },
+    {
+        "Q5": "Which of the following should NOT be done for Point-to-Point transport service driver",
+        "A1": "Overcharge",
+        "A2": "Read or send SMS while taxi is in motion",
+        "A3": "Start an argument with a passenger",
+        "A4": "All of the above"
+    },
+    {
+        "Q6": "How do you reduce fatigue due to long hours of plying on the road?",
+        "A1": "Have regular breaks and do some stretching exercises",
+        "A2": "Drink more coffee",
+        "A3": "Eat more rice",
+        "A4": "Apply medicated oil"
+    },
+    {
+        "Q7": "A driver's driving will be affected by ____",
+        "A1": "His or her Vision",
+        "A2": "His or her physical health",
+        "A3": "The taking of medications",
+        "A4": "Having all the above conditions"
+    },
+    {
+        "Q8": "When must you report to your insurance company when you are involved in an accident that causes injuries?",
+        "A1": "Within 14 days",
+        "A2": "By the next working day",
+        "A3": "Within 7 days",
+        "A4": "No need to inform"
+    },
+    {
+        "Q9": "Which of the following aid in avoiding collision with vehicle ahead?",
+        "A1": "Staying alert",
+        "A2": "Keep a safe distance from the vehicle ahead",
+        "A3": "Do not tailgate the vehicle in front of you ",
+        "A4": "All of the above"
+    },
+    {
+        "Q9": "Which of the following aid in avoiding collision with vehicle ahead?",
+        "A1": "Staying alert",
+        "A2": "Keep a safe distance from the vehicle ahead",
+        "A3": "Do not tailgate the vehicle in front of you ",
+        "A4": "All of the above"
+    },
+    {
+        "Q10": "What do you understand by the term 'a good driver'? A good driver ___",
+        "A1": "Is one who never panics.",
+        "A2": "Is an alert road user",
+        "A3": "Always report incidents back to the operator company",
+        "A4": "Will provide good communication with the passengers"
+    },
+    {
+        "Q11": "Which of the following are symptoms of diabetes?",
+        "A1": "Frequent urination, thirst, and hunger",
+        "A2": "Blurred vision",
+        "A3": "Numb or tingling in hands or feet",
+        "A4": "All of the above"
+    },
+    {
+        "Q12": "How do you keep clean your taxi or private hire car?",
+        "A1": "Wash and clean the car exterior",
+        "A2": "Wipe clean and sanitised the car interior",
+        "A3": "Clear all wastes in the car to ensure it is free of cockroaches and ants",
+        "A4": "All the above"
+    },
+    {
+        "Q13": "Which one of the following helps to manage high-blood pressure?",
+        "A1": "Smoking",
+        "A2": "Drinking fruit juices everyday",
+        "A3": "Taking blood pressure medication regularly",
+        "A4": "Go for strenuous exercises "
+    },
+    {
+        "Q14": "Which one of the following helps to manage diabetes?",
+        "A1": "Smoking",
+        "A2": "Regular medical check-ups",
+        "A3": "Overeating",
+        "A4": "Drinking alcohol excessively"
+    },
+    {
+        "Q15": "If an accident causing injuries happens is caused by the car behind you should ___",
+        "A1": "Stay calm and get out of your car to investigate.",
+        "A2": "Call the Police at 999 or 995 for ambulance if someone is hurt",
+        "A3": "Inform your operator company and the insurance company of the accident",
+        "A4": "Carry out all the above actions "
+    },
+    {
+        "Q16": "What should you do first if a passenger robs you in your vehicle?",
+        "A1": "Fight back to the last breath",
+        "A2": "Press the distress panic button in your Taxi to alert the company",
+        "A3": "Call for the Police at 999 if you can",
+        "A4": "Beg for his forgiveness and not to harm you."
+    },
+    {
+        "Q17": "How does the SG Secure App help you in time of emergency? ",
+        "A1": "Allows you to call for Ambulance at 995",
+        "A2": "Helps you to call the Police at 999 or alert them via SMS",
+        "A3": "Helps you to call the operator for help",
+        "A4": "Allows you to be a good citizen "
+    },
+    {
+        "Q18": "What should you do if you observe a potential passenger who appear to be drunk?",
+        "A1": "Pick up the drunk passenger as usual and hope that nothing will happen",
+        "A2": "For safety reason, I will have to be vigilant with the behaviour of this passenger",
+        "A3": "Call for the Police at 999 to arrest the passenger",
+        "A4": "Do not pick up the passenger and drive your car away."
+    },
+    {
+        "Q19": "What should you do or say if your passenger keeps quiet and did not tell you where she wants to go?",
+        "A1": "Just keep quiet",
+        "A2": "Say to the passenger 'Sir/Mdm, please tell me where you want to go?'",
+        "A3": "Tell the passenger to get out of your vehicle.",
+        "A4": "Tell the passenger to write it down for you."
+    },
+    {
+        "Q20": "How do you assist a wheelchair-bound passenger to board your taxi?",
+        "A1": "Help to transfer the passenger between the wheelchair and the vehicle",
+        "A2": "Help to close or fold the wheelchair",
+        "A3": "Help to put the folded wheelchair in boot",
+        "A4": "All of the above"
+    }
+]
