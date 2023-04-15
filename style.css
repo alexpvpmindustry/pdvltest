@@ -1,0 +1,36 @@
+
+/* Set the margin of the body element to 0 */
+body {
+  margin: 0;
+}
+/* Set the width of the container element to 80% */
+#container {
+  /* width: 50%; */
+  /* Set the margin to auto to center align the container */
+  text-align: center;
+}
+#clock {
+    font-size: 5rem;
+    /* width: 50rem; */
+    /* margin: 10%; */
+    /* text-align: center; */
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
+}
+
+.float{
+	position:fixed;
+	width:25rem;
+	/* height:60px; */
+	top:3rem;
+	right:5rem;
+	background-color:#0C9;
+	color:#000000;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
