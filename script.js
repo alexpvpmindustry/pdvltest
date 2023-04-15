@@ -1,22 +1,4 @@
-
-// function showTime(timeEnd) {
-//     let timeLeft = timeEnd - Math.round(new Date().getTime()/1000)
-//     let mins = Math.floor(timeLeft /  60);
-//     let secs = Math.floor(timeLeft %  60);
-//     document.getElementById("clock")
-//         .innerHTML = "Time left: "+mins+"min"+secs+"s" +"\n"+Math.round(new Date().getTime()/1000);
-// }
-
-// //showTime();
-// function startTest(){
-//     let timeEnd = new Date().getTime();
-//     timeEnd = Math.round(timeEnd/1000)+30*60
-//     countdown=30*60
-//     let x = setInterval(showTime(timeEnd), 1000);
-//     showTime(timeEnd)
-// }
-
-function startTest() {
+function startTimer() {
   var countDownDate = new Date().getTime() + 1000 + 30 * 60 * 1000; // 30 minutes from now
   var x = setInterval(function () {
     var now = new Date().getTime();
@@ -29,6 +11,11 @@ function startTest() {
       document.getElementById("clock").innerHTML = "EXPIRED";
     }
   }, 100);
+}
+
+function startTest() {
+  startTimer();
+  document.getElementById("result1").innerHTML = data;
 }
 
 function getRadioValue() {
