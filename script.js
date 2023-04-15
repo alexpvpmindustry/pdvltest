@@ -17,6 +17,11 @@ function startTest() {
   startTimer();
   //document.getElementById("result1").innerHTML = data;
   fetchdata();
+  let startbutton = document.getElementById("start");
+  startbutton.disabled =true;
+  document.getElementById("start").innerText="test started";
+  let restartbutton = document.getElementById("restart");
+  restartbutton.style.display="block";
 }
 
 function getRadioValue() {
