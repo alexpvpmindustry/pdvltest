@@ -27,6 +27,41 @@ function getRadioValue() {
     }
   }
 }
+class Qn { 
+  constructor(price, title, image, description) {
+    this.QnTemplate = `
+<div class="mdc-form-field">
+<div class="mdc-radio">
+  <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" value="1" checked>
+  <div class="mdc-radio__background">
+    <div class="mdc-radio__outer-circle"></div>
+    <div class="mdc-radio__inner-circle"></div>
+  </div>
+  <div class="mdc-radio__ripple"></div>
+</div>
+<label for="radio-1">Sample A</label>
+<div class="mdc-radio">
+  <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" value="2">
+  <div class="mdc-radio__background">
+    <div class="mdc-radio__outer-circle"></div>
+    <div class="mdc-radio__inner-circle"></div>
+  </div>
+  <div class="mdc-radio__ripple"></div>
+</div>
+<label for="radio-1">Sample B</label>
+<div class="mdc-radio">
+  <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios" value="3">
+  <div class="mdc-radio__background">
+    <div class="mdc-radio__outer-circle"></div>
+    <div class="mdc-radio__inner-circle"></div>
+  </div>
+  <div class="mdc-radio__ripple"></div>
+</div>
+<label for="radio-1">Random</label>
+</div>`;
+  }
+}
+
 let sample1dict={};
 fetch('sample1.json')
   .then(function (response) {
