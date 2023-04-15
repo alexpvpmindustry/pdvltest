@@ -18,7 +18,22 @@ body {
 	/* border: 2px solid black; */
 	/* border-radius: 20px; */
 }
-
+.question{
+	text-align: left;
+	padding: 2%;
+	margin: 6%;
+	border: #000000;
+	border-width: thin; 
+	border-style: ridge;
+}
+.wrongans{
+	color: rgb(224, 37, 4);
+	font-weight: bold;
+}
+.rightans{
+	color: rgb(0, 173, 0);
+	font-weight: bold;
+}
 .float {
 	position: fixed;
 	width: 25rem;
