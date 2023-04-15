@@ -18,22 +18,26 @@ body {
 	/* border: 2px solid black; */
 	/* border-radius: 20px; */
 }
-.question{
+
+.question {
 	text-align: left;
-	padding: 2vw; 
+	padding: 2vw;
 	margin: 2vw;
 	border: #000000;
-	border-width: thin; 
+	border-width: thin;
 	border-style: ridge;
 }
-.wrongans{
+
+.wrongans {
 	color: rgb(224, 37, 4);
 	font-weight: bold;
 }
-.rightans{
+
+.rightans {
 	color: rgb(0, 173, 0);
 	font-weight: bold;
 }
+
 .float {
 	position: fixed;
 	width: 13vw;
@@ -49,4 +53,18 @@ body {
 
 .my-float {
 	margin-top: 22px;
+}
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-top: 15vw;
+	height: 30vw;
+	background-color: #6200ee;
+	color: white;
+	text-align: center;
+}
+.padding_lr_5 {
+	margin-left: 2vw; 
 }
