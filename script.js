@@ -15,10 +15,10 @@
 //     let x = setInterval(showTime(timeEnd), 1000);
 //     showTime(timeEnd)
 // }
- 
+
 function startTest() {
-  var countDownDate = new Date().getTime() + 1000+30 * 60 * 1000; // 30 minutes from now
-  var x = setInterval(function() {
+  var countDownDate = new Date().getTime() + 1000 + 30 * 60 * 1000; // 30 minutes from now
+  var x = setInterval(function () {
     var now = new Date().getTime();
     var distance = countDownDate - now;
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -29,16 +29,16 @@ function startTest() {
       document.getElementById("clock").innerHTML = "EXPIRED";
     }
   }, 100);
-} 
+}
 
 function getRadioValue() {
-    var ele = document.getElementsByName('radios');
-      
-    for(i = 0; i < ele.length; i++) {
-        if(ele[i].checked)
-        document.getElementById("resultss").innerHTML
-                = "selected: "+ele[i].value;
+  var ele = document.getElementsByName('radios');
+  for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+      document.getElementById("resultss").innerHTML = "selected: " + ele[i].value;
+      return ele[i].value
     }
+  }
 }
 
 
