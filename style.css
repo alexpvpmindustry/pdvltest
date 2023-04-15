@@ -11,7 +11,7 @@ body {
 }
 
 #clock {
-	font-size: 5rem;
+	font-size: 3.2vw;
 	/* width: 50rem; */
 	/* margin: 10%; */
 	/* text-align: center; */
@@ -20,8 +20,8 @@ body {
 }
 .question{
 	text-align: left;
-	padding: 2%;
-	margin: 6%;
+	padding: 2vw; 
+	margin: 2vw;
 	border: #000000;
 	border-width: thin; 
 	border-style: ridge;
@@ -36,10 +36,10 @@ body {
 }
 .float {
 	position: fixed;
-	width: 25rem;
+	width: 13vw;
 	/* height:60px; */
-	top: 3rem;
-	right: 5rem;
+	top: -1vw;
+	right: 2vw;
 	background-color: #0C9;
 	color: #000000;
 	border-radius: 50px;

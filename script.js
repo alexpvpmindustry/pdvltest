@@ -16,6 +16,7 @@ function startTimer() {
 function startTest() {
   startTimer();
   //document.getElementById("result1").innerHTML = data;
+  fetchdata();
 }
 
 function getRadioValue() {
@@ -28,65 +29,52 @@ function getRadioValue() {
   }
 }
 class Qn { 
-  constructor(price, title, image, description) {
-    this.QnTemplate = `
-<div class="mdc-form-field">
-<div class="mdc-radio">
-  <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" value="1" checked>
-  <div class="mdc-radio__background">
-    <div class="mdc-radio__outer-circle"></div>
-    <div class="mdc-radio__inner-circle"></div>
-  </div>
-  <div class="mdc-radio__ripple"></div>
-</div>
-<label for="radio-1">Sample A</label>
-<div class="mdc-radio">
-  <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" value="2">
-  <div class="mdc-radio__background">
-    <div class="mdc-radio__outer-circle"></div>
-    <div class="mdc-radio__inner-circle"></div>
-  </div>
-  <div class="mdc-radio__ripple"></div>
-</div>
-<label for="radio-1">Sample B</label>
-<div class="mdc-radio">
-  <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios" value="3">
-  <div class="mdc-radio__background">
-    <div class="mdc-radio__outer-circle"></div>
-    <div class="mdc-radio__inner-circle"></div>
-  </div>
-  <div class="mdc-radio__ripple"></div>
-</div>
-<label for="radio-1">Random</label>
-</div>`;
+  constructor(qq, a1, a2, a3,a4,qname) {
+    this.QnTemplate = `<div class="question">
+     <div>${qname}: ${qq}<div><br>
+    <input type="radio" id="A1" name=${qname} value="A1">
+    <label for="radio" id="AA1">${a1}</label><br>
+    <input type="radio" id="A2" name=${qname} value="A2">
+    <label for="radio" id="AA2">${a2}</label><br>
+    <input type="radio" id="A3" name=${qname} value="A3">
+    <label for="radio" id="AA3">${a3}</label><br>
+    <input type="radio" id="A4" name=${qname} value="A4">
+    <label for="radio" id="AA4">${a4}</label><br>
+  </div>`;
   }
 }
 
 let sample1dict={};
-fetch('sample1.json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    appendData(data);
-  })
-  .catch(function (err) {
-    console.log('error: ' + err);
-  });
+function fetchdata(){
+  fetch('sample1.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      appendData(data);
+    })
+    .catch(function (err) {
+      console.log('error: ' + err);
+    });
 
+}
 function appendData(data) {
   let mainContainer = document.getElementById("result1");
-  for (let i = 0; i < data.length; i++) {
-    //let div = document.createElement("div");
-    //div.innerHTML = data[i]["Q"+(i+1)]+'<br>A1: ' + data[i].A1 + '<br>A2' + data[i].A2;
-    //mainContainer.appendChild(div); 
+  for (let i = 0; i < data.length; i++) { 
     sample1dict["Q"+(i+1)] = [data[i]["Q"+(i+1)],data[i].A1,data[i].A2,data[i].A3,data[i].A4]
   }
   for (let i = 0; i < data.length; i++) {
     let div = document.createElement("div");
     //div.innerHTML = data[i]["Q"+(i+1)]+'<br>A1: ' + data[i].A1 + '<br>A2' + data[i].A2;
-    div.innerHTML = ("Q"+(i+1))+sample1dict["Q"+(i+1)][0]
+    //div.innerHTML = ("Q"+(i+1))+sample1dict["Q"+(i+1)][0]
+    let sd = sample1dict["Q"+(i+1)]
+    div.innerHTML = `${new Qn(sd[0],sd[1],sd[2],sd[3],sd[4],"Q"+(i+1)).QnTemplate}`
     mainContainer.appendChild(div); 
     //sample1dict["Q"+(i+1)] = [data[i].A1,data[i].A2,data[i].A3,data[i].A4]
   }
+  let sb = document.createElement("div");
+  sb.innerHTML = `  <button class="mdc-button mdc-button--raised" id="start" onclick="alert('yes');">
+  Submit
+</button>`
+  mainContainer.appendChild(sb);
 }
