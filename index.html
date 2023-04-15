@@ -1,151 +1,209 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PDVL Paper A Test Singapore SG</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- import Material Icons from Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Import Material styles -->
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css">
-    <!-- Import my custom styles -->
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
-  </head>
-  <body class="mdc-typography" id="container"> 
-    <h1 class="mdc-typography--headline3">PDVL Paper A Test Simulation</h1>
-    <p>Time limit = 30mins</p>
-    <p>Number of questions = 20</p>
-    <br>
-    <div class="mdc-form-field">
-      <div class="mdc-radio">
-        <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" value="1" checked>
-        <div class="mdc-radio__background">
-          <div class="mdc-radio__outer-circle"></div>
-          <div class="mdc-radio__inner-circle"></div>
-        </div>
-        <div class="mdc-radio__ripple"></div>
+
+<head>
+  <title>PDVL Paper A Test Singapore SG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- import Material Icons from Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Import Material styles -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css">
+  <!-- Import my custom styles -->
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+</head>
+
+<body class="mdc-typography" id="container">
+  <h1 class="mdc-typography--headline3">PDVL Paper A Test Simulation</h1>
+  <p>Time limit = 30mins</p>
+  <p>Number of questions = 20</p>
+  <br>
+  <div class="mdc-form-field">
+    <div class="mdc-radio">
+      <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" value="1" checked>
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
       </div>
-      <label for="radio-1">Sample A</label>
-      <div class="mdc-radio">
-        <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" value="2">
-        <div class="mdc-radio__background">
-          <div class="mdc-radio__outer-circle"></div>
-          <div class="mdc-radio__inner-circle"></div>
-        </div>
-        <div class="mdc-radio__ripple"></div>
-      </div>
-      <label for="radio-1">Sample B</label>
-      <div class="mdc-radio">
-        <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios" value="3" >
-        <div class="mdc-radio__background">
-          <div class="mdc-radio__outer-circle"></div>
-          <div class="mdc-radio__inner-circle"></div>
-        </div>
-        <div class="mdc-radio__ripple"></div>
-      </div>
-      <label for="radio-1">Random</label>
+      <div class="mdc-radio__ripple"></div>
     </div>
-    <br>
-    <button class="mdc-button mdc-button--raised" id="start" onclick="startTest();getRadioValue();">
-      Press to start
-    </button>
-    <div id="clock" class="float my-float">30:01</div> 
-    <p id="resultss">selected radio </p>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    <label for="radio-1">Sample A</label>
+    <div class="mdc-radio">
+      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" value="2">
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+      <div class="mdc-radio__ripple"></div>
+    </div>
+    <label for="radio-1">Sample B</label>
+    <div class="mdc-radio">
+      <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios" value="3">
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+      <div class="mdc-radio__ripple"></div>
+    </div>
+    <label for="radio-1">Random</label>
+  </div>
+  <br>
+  <button class="mdc-button mdc-button--raised" id="start" onclick="startTest();getRadioValue();">
+    Press to start
+  </button>
+  <div id="clock" class="float my-float">30:01</div>
+  <p id="resultss">selected radio </p>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
-    <h2>
-      This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and a button that starts the timer when clicked.
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
+  <h2>
+    This code creates a simple web page with a heading element displaying the initial countdown time of 10 minutes, and
+    a button that starts the timer when clicked.
 
-When the startTimer() function is called, it creates a countDownDate variable representing the time when the countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the setInterval() function, which runs every 1000 milliseconds (1 second).
+    When the startTimer() function is called, it creates a countDownDate variable representing the time when the
+    countdown should end (in this case, 10 minutes from the current time). It then sets up an interval using the
+    setInterval() function, which runs every 1000 milliseconds (1 second).
 
-Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the heading element with the new time.
+    Within the interval, it calculates the remaining time left in the countdown by subtracting the current time from the
+    countDownDate variable. It then formats the remaining time into minutes and seconds, and updates the text of the
+    heading element with the new time.
 
-If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the text of the heading element to display "EXPIRED".
+    If the remaining time is less than zero (i.e. the countdown has expired), it clears the interval and updates the
+    text of the heading element to display "EXPIRED".
 
-This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time, formatting, and behavior when the countdown expires.
-    </h2>
+    This is just a basic example, and you can customize the timer to suit your needs by adjusting the starting time,
+    formatting, and behavior when the countdown expires.
+  </h2>
 
-  </body>
-  
-  <!-- Import Material scripts -->
-  <script src="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.js"></script>
-  <!--  Import my scripts  -->
-  <script src="./components.js"></script>
-  
+</body>
+
+<!-- Import Material scripts -->
+<script src="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.js"></script>
+<!--  Import my scripts  -->
+<script src="./components.js"></script>
+
 </html>
