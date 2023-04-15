@@ -27,8 +27,8 @@ function getRadioValue() {
     }
   }
 }
-
-fetch('user.json')
+let sample1dict={};
+fetch('sample1.json')
   .then(function (response) {
     return response.json();
   })
@@ -42,8 +42,16 @@ fetch('user.json')
 function appendData(data) {
   let mainContainer = document.getElementById("result1");
   for (let i = 0; i < data.length; i++) {
+    //let div = document.createElement("div");
+    //div.innerHTML = data[i]["Q"+(i+1)]+'<br>A1: ' + data[i].A1 + '<br>A2' + data[i].A2;
+    //mainContainer.appendChild(div); 
+    sample1dict["Q"+(i+1)] = [data[i]["Q"+(i+1)],data[i].A1,data[i].A2,data[i].A3,data[i].A4]
+  }
+  for (let i = 0; i < data.length; i++) {
     let div = document.createElement("div");
-    div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
-    mainContainer.appendChild(div);
+    //div.innerHTML = data[i]["Q"+(i+1)]+'<br>A1: ' + data[i].A1 + '<br>A2' + data[i].A2;
+    div.innerHTML = ("Q"+(i+1))+sample1dict["Q"+(i+1)][0]
+    mainContainer.appendChild(div); 
+    //sample1dict["Q"+(i+1)] = [data[i].A1,data[i].A2,data[i].A3,data[i].A4]
   }
 }
