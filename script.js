@@ -15,7 +15,7 @@ function startTimer() {
   }, 100);
 }
 function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
+  let currentIndex = array.length, randomIndex;
   // While there remain elements to shuffle.
   while (currentIndex != 0) {
     // Pick a remaining element.
@@ -32,13 +32,13 @@ let randomOrder = Array(20).fill().map((x,i)=>i);
 function startTest() {
   let radioval = getRadioValue();
   blockRadio();
-  if (radioval==3){
+  if (radioval == 3) {
     shuffle(randomOrder);
-    if(Math.random() < 0.5){
-      radioval=1;
+    if (Math.random() < 0.5) {
+      radioval = 1;
     }
-    else{
-      radioval=1;
+    else {
+      radioval = 1;
     }
   }
   if (radioval==1){
@@ -50,10 +50,10 @@ function startTest() {
     fetchdata('sample2ans.json',true);
   } 
   let startbutton = document.getElementById("start");
-  startbutton.disabled =true;
-  document.getElementById("start").innerText="test started";
+  startbutton.disabled = true;
+  document.getElementById("start").innerText = "test started";
   let restartbutton = document.getElementById("restart");
-  restartbutton.style.display="block";
+  restartbutton.style.display = "block";
   startTimer();
 }
 
@@ -66,14 +66,14 @@ function getRadioValue() {
     }
   }
 }
-function blockRadio(){
+function blockRadio() {
   var ele = document.getElementsByName('radios');
   for (i = 0; i < ele.length; i++) {
-    ele[i].disabled =true;
+    ele[i].disabled = true;
   }
 }
 class Qn { 
-  constructor(qq, a1, a2, a3,a4,qname,delayy) { // delay doesnt work
+  constructor(qq, a1, a2, a3, a4, qname, delayy) { // delay doesnt work
     this.QnTemplate = `<div class="question animate" style="animationDelay: ${delayy}s">
      <div>${qname}: ${qq}<div><br>
     <input type="radio" id="A1" name=${qname} value="A1">
@@ -88,18 +88,19 @@ class Qn {
   }
 }
 
-let sample1dict={};
-let ans1dict={};
-function fetchdata(file,ans){
+let sample1dict = {};
+let ans1dict = {};
+let passScore=17;
+function fetchdata(file, ans) {
   fetch(file)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      if (!ans){
+      if (!ans) {
       appendData(data);
       displayData();
-      }else{
+      } else {
       appendAnsData(data);
       }
     })
