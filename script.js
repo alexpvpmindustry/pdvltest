@@ -89,7 +89,7 @@ class Qn {
 }
 
 let sample1dict={};
-let ansdict={};
+let ans1dict={};
 function fetchdata(file,ans){
   fetch(file)
     .then(function (response) {
@@ -111,7 +111,13 @@ function fetchdata(file,ans){
 function appendData(data) {
   for (let ii = 0; ii < data.length; ii++) {
     let i = randomOrder[ii];
-    sample1dict["Q"+(i+1)] = [data[i]["Q"+(i+1)],data[i].A1,data[i].A2,data[i].A3,data[i].A4,"Q"+(ii+1)]
+    sample1dict["Q"+(ii+1)] = [data[i]["Q"+(i+1)],data[i].A1,data[i].A2,data[i].A3,data[i].A4,"Q"+(ii+1),"Q"+(i+1)]
+  }
+}
+function appendAnsData(data) {
+  for (let ii = 0; ii < data.length; ii++) {
+    let i = randomOrder[ii];
+    ans1dict["Q"+(ii+1)] = [data[i]["Q"+(i+1)],"Q"+(ii+1),"Q"+(i+1)]
   }
 }
 function displayData() {
@@ -129,9 +135,12 @@ function displayData() {
   sb.innerHTML = `<button class="mdc-button mdc-button--raised" id="start" onclick="grade();">Submit</button>`
   mainContainer.appendChild(sb);
 }
+let nodeval;
 function grade(){
   const children = document.querySelectorAll('.question');
   children.forEach((node, index) => {
+    //if(){}
+    nodeval=node;
 		node.style.backgroundColor = "red";
 	});
 }
