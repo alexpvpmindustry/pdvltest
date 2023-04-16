@@ -1,142 +1,62 @@
 [
     {
-        "Q1": "If you provide a Point-to-point transport service as a driver, you must ___",
-        "A1": "Consume food and smoke in your car",
-        "A2": "Challenge passengers to complain against LTA",
-        "A3": "Start an argument with a passenger",
-        "A4": "Not do all the above"
+        "Q1":"A4"
     },
     {
-        "Q2": "Who regulates the fare structure for taxi services?",
-        "A1": "Land Transport Authority (LTA)",
-        "A2": "Union",
-        "A3": "Public Transport Council (PTC)",
-        "A4": "Taxi driver"
+        "Q2": "A3"
     },
     {
-        "Q3": "Which of the following is part of the Code of Conduct for Point-to-Point transport operator?",
-        "A1": "To dress professionally, in collar shirt, tailored pants and covered shoes",
-        "A2": "To be friendly, courteous, and helpful",
-        "A3": "To smile and practise safe driving habits always",
-        "A4": "All of the above"
+        "Q3": "A4"
     },
     {
-        "Q4": "Which of the following is the attribute of a street-hail and a ride-hail driver?",
-        "A1": "I provide service to all passengers, regardless of their race, language or religion",
-        "A2": "I will challenge my passengers to a fight who argue with me",
-        "A3": "I will speed to get to the destination",
-        "A4": "I will comply with all traffic rules only when enforcement officer is present"
+        "Q4": "A1"
     },
     {
-        "Q5": "What do you understand by the term 'a street-hail service' in Singapore?",
-        "A1": "A service where flagging down a taxi at a taxi stand is allowed",
-        "A2": "A service where flagging down a taxi at a bus-stop",
-        "A3": "When booking of taxi is only by using a mobile app",
-        "A4": "When you can book a taxi by calling a Private Hire Car operator number"
+        "Q5": "A1"
     },
     {
-        "Q6": "If one of the tyres of your Taxi is blown out, what must you do?",
-        "A1": "Sit in the car and wait for help.",
-        "A2": "Call upon other car drivers to help you.",
-        "A3": "You must change it even if you do not know how to do it.",
-        "A4": "Change the tyre if possible. If not, seek help by calling the Automobile Association or get help from other taxi drivers."
+        "Q6": "A4"
     },
     {
-        "Q7": "How do you keep clean your taxi or private hire car?",
-        "A1": "Wash and clean the car exterior",
-        "A2": "Wipe clean and sanitised the car interior",
-        "A3": "Clear all wastes in the car to ensure it is free of cockroaches and ants",
-        "A4": "All the above"
+        "Q7": "A4"
     },
     {
-        "Q8": "What are the guidelines to be followed to ensure the safety of the passengers?",
-        "A1": "Slow down and drive carefully over the road tumps. Do not overtake",
-        "A2": "Inform passengers that they must wear safety belt for their safety",
-        "A3": "Do not carry more passengers beyond what is allowed in your vehicle",
-        "A4": "All of the above"
+        "Q8": "A4"
     },
     {
-        "Q9": "Which is NOT an occupational health hazard to a Taxi driver?",
-        "A1": "Pain to backbone, neck, or head",
-        "A2": "Fatigue and stress",
-        "A3": "Sleep deprivation (lack of sleep)",
-        "A4": "Toothache"
+        "Q9": "A4"
     },
     {
-        "Q10": "Which of the following are symptoms of diabetes?",
-        "A1": "Frequent urination, thirst, and hunger",
-        "A2": "Blurred vision",
-        "A3": "Numb or tingling in hands or fest",
-        "A4": "All of the above"
+        "Q10": "A4"
     },
     {
-        "Q11": "Which of the following aid in avoiding collision with vehicle ahead?",
-        "A1": "Staying alert",
-        "A2": "Keep a safe distance from the vehicle ahead",
-        "A3": "Do not tailgate the vehicle in front of you",
-        "A4": "All of the above"
+        "Q11": "A4"
     },
     {
-        "Q12": "Which of the following should be done if an accident causing injuries happens?",
-        "A1": "Do not panic.",
-        "A2": "Call the Police at 999 or 995 for ambulance",
-        "A3": "Inform your operator company and the insurance company of the accident within 24 hours, or by the next working day",
-        "A4": "All of the above"
+        "Q12": "A4"
     },
     {
-        "Q13": "For a street-hail or a ride-hail driver, fatigue can lead to",
-        "A1": "Driver becoming more alert and drive carefully",
-        "A2": "Driver falling asleep at the wheel and resulting in road accidents.",
-        "A3": "Lowering body stress and anxiety",
-        "A4": "Driver talking louder and louder"
+        "Q13": "A2"
     },
     {
-        "Q14": "Who is responsible for the passenger's safety in the taxi or private hire car?",
-        "A1": "The passenger",
-        "A2": "The driver",
-        "A3": "Service provider operators",
-        "A4": "Traffic Police"
+        "Q14": "A2"
     },
     {
-        "Q15": "What should you do when your vehicle has broken down or stalled?",
-        "A1": "Move it to the road shoulder if possible",
-        "A2": "Switch on the hazard lights",
-        "A3": "Place the breakdown-warning triangle at least 20m behind the vehicle",
-        "A4": "All of the above "
+        "Q15": "A4"
     },
     {
-        "Q16": "What is the first thing you must do if a passenger has fainted in your vehicle?",
-        "A1": "Carry the passenger out of your car",
-        "A2": "Drive your car to the side of the road and call your operator company",
-        "A3": "Help to revive the passenger with medical oil",
-        "A4": "Search the body of the passenger for a handphone to call his or her family."
+        "Q16": "A2"
     },
     {
-        "Q17": "According to LTA's IVRD (in-vehicle recording devices) guidelines, the driver is NOT allowed to use ___ for personal gain.",
-        "A1": "The communication between passengers talking in the car",
-        "A2": "Recorded video and audio of passengers",
-        "A3": "The photo of passengers",
-        "A4": "All of the above"
+        "Q17": "A4"
     },
     {
-        "Q18": "In communicating with the passenger, the driver should _____",
-        "A1": "Sense the need to talk to the passenger",
-        "A2": "Keep on talking and explaining",
-        "A3": "Show gestures as much as possible",
-        "A4": "Turn his head behind and talk to passenger all the time"
+        "Q18": "A1"
     },
     {
-        "Q19": "What should you do when you notice your passenger is on a wheelchair?",
-        "A1": "Just ignore it and do nothing",
-        "A2": "Pretend you didn't see it",
-        "A3": "Get out of the car and offer your help",
-        "A4": "Tell the passenger not to take your vehicle."
+        "Q19": "A3"
     },
     {
-        "Q20": "What should you say/do with the change after you have collected cash payment from a passenger before he alights from the taxi?",
-        "A1": "Keep the change quietly",
-        "A2": "'Sir/Mdm, your change'",
-        "A3": "'Sir/Mdm, can I keep the change?'",
-        "A4": "'Sir/Mam, can you donate the change?'"
+        "Q20": "A2"
     }
 ]
