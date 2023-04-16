@@ -65,6 +65,25 @@ body {
 	color: white;
 	text-align: center;
 }
+
 .padding_lr_5 {
-	margin-left: 2vw; 
+	margin-left: 2vw;
 }
+
+.animate {
+	animation-duration: 0.7s;
+	animation-name: animate-fade;
+	animation-delay: 0.3s;
+	animation-fill-mode:backwards;
+  }
+  
+  @keyframes animate-fade {
+	0% {
+	  opacity: 0;
+	  padding-left: 100%;
+	  margin-left: 100%;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
