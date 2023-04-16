@@ -67,7 +67,8 @@ body {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding-top: 15vw;
+	padding-top: 5vw;
+	padding-bottom: 15vw;
 	height: 30vw;
 	background-color: #6200ee;
 	color: white;

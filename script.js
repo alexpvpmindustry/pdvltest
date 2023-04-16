@@ -1,8 +1,11 @@
+let endedTest = false;
+let endTime;
 function startTimer() {
   var countDownDate = new Date().getTime() + 2000 + 30 * 60 * 1000; // 30 minutes from now
   //var countDownDate = new Date().getTime() + 4000 ;//+ 30 * 60 * 1000; // 4 sec
   var x = setInterval(function () {
-    var now = new Date().getTime();
+    var now;
+    if (!endedTest) { now = new Date().getTime(); } else { now = endTime;}
     var distance = countDownDate - now;
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -28,7 +31,7 @@ function shuffle(array) {
   return array;
 }
 
-let randomOrder = Array(20).fill().map((x,i)=>i);
+let randomOrder = Array(20).fill().map((x, i) => i);
 function startTest() {
   let radioval = getRadioValue();
   blockRadio();
@@ -41,14 +44,14 @@ function startTest() {
       radioval = 1;
     }
   }
-  if (radioval==1){
-    fetchdata('sample1.json',false);
-    fetchdata('sample1ans.json',true);
+  if (radioval == 1) {
+    fetchdata('sample1.json', false);
+    fetchdata('sample1ans.json', true);
   }
-  if (radioval==2){
-    fetchdata('sample2.json',false);
-    fetchdata('sample2ans.json',true);
-  } 
+  if (radioval == 2) {
+    fetchdata('sample2.json', false);
+    fetchdata('sample2ans.json', true);
+  }
   let startbutton = document.getElementById("start");
   startbutton.disabled = true;
   document.getElementById("start").innerText = "test started";
@@ -72,7 +75,7 @@ function blockRadio() {
     ele[i].disabled = true;
   }
 }
-class Qn { 
+class Qn {
   constructor(qq, a1, a2, a3, a4, qname, delayy) { // delay doesnt work
     this.QnTemplate = `<div class="question animate" style="animationDelay: ${delayy}s">
      <div>${qname}: ${qq}<div><br>
@@ -90,7 +93,7 @@ class Qn {
 
 let sample1dict = {};
 let ans1dict = {};
-let passScore=17;
+let passScore = 17;
 function fetchdata(file, ans) {
   fetch(file)
     .then(function (response) {
@@ -98,10 +101,10 @@ function fetchdata(file, ans) {
     })
     .then(function (data) {
       if (!ans) {
-      appendData(data);
-      displayData();
+        appendData(data);
+        displayData();
       } else {
-      appendAnsData(data);
+        appendAnsData(data);
       }
     })
     .catch(function (err) {
@@ -142,9 +145,11 @@ function displayData() {
 let nodeval;
 let scores = 0;
 function grade() {
+  endTime = new Date().getTime();
+  endedTest = true;
   const children = document.querySelectorAll('.question');
   children.forEach((node, index) => {
-    let correct = false; let realans=ans1dict["Q" + (index + 1)][0];
+    let correct = false; let realans = ans1dict["Q" + (index + 1)][0];
     let varr = node.children[0].children[0].children;
     for (var childi = 0; childi < varr.length; childi++) {
       let child = varr[childi]
@@ -152,7 +157,7 @@ function grade() {
       if (child.checked) {
         if (child.value == realans) {
           correct = true;
-          scores++; 
+          scores++;
         } else {
         }
       }
@@ -161,25 +166,25 @@ function grade() {
       node.style.backgroundColor = "green";
     }
     else {
-		node.style.backgroundColor = "red";
+      node.style.backgroundColor = "red";
       let sb = document.createElement("div");
       sb.innerHTML = `<p>correct answer is ${realans.substr(1)}</p>`
-      sb.style.backgroundColor="yellow";
-      sb.style.textAlign="center";
-      sb.style.marginLeft="10vw";
-      sb.style.marginRight="10vw";
+      sb.style.backgroundColor = "yellow";
+      sb.style.textAlign = "center";
+      sb.style.marginLeft = "10vw";
+      sb.style.marginRight = "10vw";
       node.appendChild(sb)
     }
-	});
+  });
   const finalscore = document.getElementById('finalscore');
 
   let passedtext;
-  if (scores>=passScore){
-    passedtext="[PASSED]"
-  }else{
-    passedtext="[FAILED]"
+  if (scores >= passScore) {
+    passedtext = "[PASSED]"
+  } else {
+    passedtext = "[FAILED]"
   }
-  finalscore.innerHTML=`Score = ${scores}/${20}. ${passedtext}`
-  finalscore.style.display="block";
+  finalscore.innerHTML = `Score = ${scores}/${20}. ${passedtext}`
+  finalscore.style.display = "block";
 
 }
