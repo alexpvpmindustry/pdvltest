@@ -1,0 +1,23 @@
+[
+    {
+        "Q1": "If you provide a Point-to-point transport service as a driver, you must ___",
+        "A1": "Consume food and smoke in your car",
+        "A2": "Challenge passengers to complain against LTA",
+        "A3": "Start an argument with a passenger",
+        "A4": "Not do all the above"
+    },
+    {
+        "Q2": "Who regulates the fare structure for taxi services?",
+        "A1": "Land Transport Authority (LTA)",
+        "A2": "Union",
+        "A3": "Public Transport Council (PTC)",
+        "A4": "Taxi driver"
+    },
+    {
+        "Q3": "Which of the following is part of the Code of Conduct for Point-to-Point transport operator?",
+        "A1": "To dress professionally, in collar shirt, tailored pants and covered shoes",
+        "A2": "To be friendly, courteous, and helpful",
+        "A3": "To smile and practise safe driving habits always",
+        "A4": "All of the above"
+    }
+]
