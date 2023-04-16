@@ -18,7 +18,12 @@ body {
 	/* border: 2px solid black; */
 	/* border-radius: 20px; */
 }
-
+.text-block{
+	margin: 2vw;
+	margin:auto;
+	text-align: center;
+	max-width: 1000px;
+}
 .question {
 	text-align: left;
 	padding: 2vw;
