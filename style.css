@@ -27,6 +27,14 @@ body {
 	border-width: thin;
 	border-style: ridge;
 }
+.finalscore { 
+	padding: 2vw;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	border: #6200ee;
+	border-width: thick;
+	border-style:groove;
+}
 
 .wrongans {
 	color: rgb(224, 37, 4);

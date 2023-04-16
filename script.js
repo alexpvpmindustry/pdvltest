@@ -90,6 +90,7 @@ class Qn {
 
 let sample1dict = {};
 let ans1dict = {};
+let passScore=17;
 function fetchdata(file, ans) {
   fetch(file)
     .then(function (response) {
@@ -133,7 +134,10 @@ function displayData() {
   }
   let sb = document.createElement("div");
   sb.innerHTML = `<button class="mdc-button mdc-button--raised" id="start" onclick="grade();this.disabled=true;">Submit</button>`
-  mainContainer.appendChild(sb);
+  mainContainer.appendChild(sb);//<div id="finalscore"></div>
+  let sb1 = document.createElement("div");
+  sb1.innerHTML = `<br><div id="finalscore" class="finalscore" style="display:none;"> </div>`
+  mainContainer.appendChild(sb1);//
 }
 let nodeval;
 let scores = 0;
@@ -161,7 +165,21 @@ function grade() {
       let sb = document.createElement("div");
       sb.innerHTML = `<p>correct answer is ${realans.substr(1)}</p>`
       sb.style.backgroundColor="yellow";
+      sb.style.textAlign="center";
+      sb.style.marginLeft="10vw";
+      sb.style.marginRight="10vw";
       node.appendChild(sb)
     }
   });
+  const finalscore = document.getElementById('finalscore');
+
+  let passedtext;
+  if (scores>=passScore){
+    passedtext="[PASSED]"
+  }else{
+    passedtext="[FAILED]"
+  }
+  finalscore.innerHTML=`Score = ${scores}/${20}. ${passedtext}`
+  finalscore.style.display="block";
+
 }
