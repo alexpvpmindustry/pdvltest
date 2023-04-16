@@ -112,36 +112,74 @@ function fetchdata(file, ans) {
 function appendData(data) {
   for (let ii = 0; ii < data.length; ii++) {
     let i = randomOrder[ii];
-    sample1dict["Q"+(ii+1)] = [data[i]["Q"+(i+1)],data[i].A1,data[i].A2,data[i].A3,data[i].A4,"Q"+(ii+1),"Q"+(i+1)]
+    sample1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], data[i].A1, data[i].A2, data[i].A3, data[i].A4, "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function appendAnsData(data) {
   for (let ii = 0; ii < data.length; ii++) {
     let i = randomOrder[ii];
-    ans1dict["Q"+(ii+1)] = [data[i]["Q"+(i+1)],"Q"+(ii+1),"Q"+(i+1)]
+    ans1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function displayData() {
   let mainContainer = document.getElementById("result1");
-  result1.style.display="block";
-  let counter=0;
-  for ( var key in sample1dict) {
+  result1.style.display = "block";
+  let counter = 0;
+  for (var key in sample1dict) {
     let div = document.createElement("div");
     let sd = sample1dict[key]
-    div.innerHTML = `${new Qn(sd[0],sd[1],sd[2],sd[3],sd[4],sd[5],counter).QnTemplate}`
-    counter=counter+5;
+    div.innerHTML = `${new Qn(sd[0], sd[1], sd[2], sd[3], sd[4], sd[5], counter).QnTemplate}`
+    counter = counter + 5;
     mainContainer.appendChild(div);
   }
   let sb = document.createElement("div");
-  sb.innerHTML = `<button class="mdc-button mdc-button--raised" id="start" onclick="grade();">Submit</button>`
-  mainContainer.appendChild(sb);
+  sb.innerHTML = `<button class="mdc-button mdc-button--raised" id="start" onclick="grade();this.disabled=true;">Submit</button>`
+  mainContainer.appendChild(sb);//<div id="finalscore"></div>
+  let sb1 = document.createElement("div");
+  sb1.innerHTML = `<br><div id="finalscore" class="finalscore" style="display:none;"> </div>`
+  mainContainer.appendChild(sb1);//
 }
 let nodeval;
-function grade(){
+let scores = 0;
+function grade() {
   const children = document.querySelectorAll('.question');
   children.forEach((node, index) => {
-    //if(){}
-    nodeval=node;
+    let correct = false; let realans=ans1dict["Q" + (index + 1)][0];
+    let varr = node.children[0].children[0].children;
+    for (var childi = 0; childi < varr.length; childi++) {
+      let child = varr[childi]
+      //console.log([child.value,child.checked,ans1dict["Q"+(index+1)][0]]); 
+      if (child.checked) {
+        if (child.value == realans) {
+          correct = true;
+          scores++; 
+        } else {
+        }
+      }
+    }
+    if (correct) {
+      node.style.backgroundColor = "green";
+    }
+    else {
 		node.style.backgroundColor = "red";
+      let sb = document.createElement("div");
+      sb.innerHTML = `<p>correct answer is ${realans.substr(1)}</p>`
+      sb.style.backgroundColor="yellow";
+      sb.style.textAlign="center";
+      sb.style.marginLeft="10vw";
+      sb.style.marginRight="10vw";
+      node.appendChild(sb)
+    }
 	});
+  const finalscore = document.getElementById('finalscore');
+
+  let passedtext;
+  if (scores>=passScore){
+    passedtext="[PASSED]"
+  }else{
+    passedtext="[FAILED]"
+  }
+  finalscore.innerHTML=`Score = ${scores}/${20}. ${passedtext}`
+  finalscore.style.display="block";
+
 }
