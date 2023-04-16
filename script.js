@@ -162,11 +162,15 @@ function grade() {
         }
       }
     }
+    node.style.borderWidth = "thick";
     if (correct) {
-      node.style.backgroundColor = "green";
+      node.style.borderColor = "rgba(50,255,50,0.8)";
+      node.style.backgroundColor= "rgba(50,255,50,0.2)";
     }
     else {
-      node.style.backgroundColor = "red";
+      node.style.borderColor = "rgba(255,50,50,0.8)";
+      node.style.backgroundColor= "rgba(255,50,50,0.2)";
+      
       let sb = document.createElement("div");
       sb.innerHTML = `<p>correct answer is ${realans.substr(1)}</p>`
       sb.style.backgroundColor = "yellow";
