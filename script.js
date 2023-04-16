@@ -132,7 +132,7 @@ function displayData() {
     mainContainer.appendChild(div);
   }
   let sb = document.createElement("div");
-  sb.innerHTML = `<button class="mdc-button mdc-button--raised" id="start" onclick="grade();">Submit</button>`
+  sb.innerHTML = `<button class="mdc-button mdc-button--raised" id="start" onclick="grade();this.disabled=true;">Submit</button>`
   mainContainer.appendChild(sb);
 }
 let nodeval;
