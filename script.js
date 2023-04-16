@@ -15,7 +15,7 @@ function startTimer() {
   }, 100);
 }
 function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
+  let currentIndex = array.length, randomIndex;
   // While there remain elements to shuffle.
   while (currentIndex != 0) {
     // Pick a remaining element.
@@ -28,32 +28,32 @@ function shuffle(array) {
   return array;
 }
 
-let randomOrder = Array(3).fill().map((x,i)=>i);
+let randomOrder = Array(3).fill().map((x, i) => i);
 function startTest() {
   let radioval = getRadioValue();
   blockRadio();
-  if (radioval==3){
+  if (radioval == 3) {
     shuffle(randomOrder);
-    if(Math.random() < 0.5){
-      radioval=1;
+    if (Math.random() < 0.5) {
+      radioval = 1;
     }
-    else{
-      radioval=1;
+    else {
+      radioval = 1;
     }
   }
-  if (radioval==1){
-    fetchdata('sample3.json',false);
-    fetchdata('sample3ans.json',true);
+  if (radioval == 1) {
+    fetchdata('sample3.json', false);
+    fetchdata('sample3ans.json', true);
   }
-  if (radioval==2){
-    fetchdata('sample3.json',false);
-    fetchdata('sample3ans.json',true);
-  } 
+  if (radioval == 2) {
+    fetchdata('sample3.json', false);
+    fetchdata('sample3ans.json', true);
+  }
   let startbutton = document.getElementById("start");
-  startbutton.disabled =true;
-  document.getElementById("start").innerText="test started";
+  startbutton.disabled = true;
+  document.getElementById("start").innerText = "test started";
   let restartbutton = document.getElementById("restart");
-  restartbutton.style.display="block";
+  restartbutton.style.display = "block";
   startTimer();
 }
 
@@ -66,14 +66,14 @@ function getRadioValue() {
     }
   }
 }
-function blockRadio(){
+function blockRadio() {
   var ele = document.getElementsByName('radios');
   for (i = 0; i < ele.length; i++) {
-    ele[i].disabled =true;
+    ele[i].disabled = true;
   }
 }
-class Qn { 
-  constructor(qq, a1, a2, a3,a4,qname,delayy) { // delay doesnt work
+class Qn {
+  constructor(qq, a1, a2, a3, a4, qname, delayy) { // delay doesnt work
     this.QnTemplate = `<div class="question animate" style="animationDelay: ${delayy}s">
      <div>${qname}: ${qq}<div><br>
     <input type="radio" id="A1" name=${qname} value="A1">
@@ -88,19 +88,19 @@ class Qn {
   }
 }
 
-let sample1dict={};
-let ans1dict={};
-function fetchdata(file,ans){
+let sample1dict = {};
+let ans1dict = {};
+function fetchdata(file, ans) {
   fetch(file)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      if (!ans){
-      appendData(data);
-      displayData();
-      }else{
-      appendAnsData(data);
+      if (!ans) {
+        appendData(data);
+        displayData();
+      } else {
+        appendAnsData(data);
       }
     })
     .catch(function (err) {
@@ -111,24 +111,24 @@ function fetchdata(file,ans){
 function appendData(data) {
   for (let ii = 0; ii < data.length; ii++) {
     let i = randomOrder[ii];
-    sample1dict["Q"+(ii+1)] = [data[i]["Q"+(i+1)],data[i].A1,data[i].A2,data[i].A3,data[i].A4,"Q"+(ii+1),"Q"+(i+1)]
+    sample1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], data[i].A1, data[i].A2, data[i].A3, data[i].A4, "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function appendAnsData(data) {
   for (let ii = 0; ii < data.length; ii++) {
     let i = randomOrder[ii];
-    ans1dict["Q"+(ii+1)] = [data[i]["Q"+(i+1)],"Q"+(ii+1),"Q"+(i+1)]
+    ans1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function displayData() {
   let mainContainer = document.getElementById("result1");
-  result1.style.display="block";
-  let counter=0;
-  for ( var key in sample1dict) {
+  result1.style.display = "block";
+  let counter = 0;
+  for (var key in sample1dict) {
     let div = document.createElement("div");
     let sd = sample1dict[key]
-    div.innerHTML = `${new Qn(sd[0],sd[1],sd[2],sd[3],sd[4],sd[5],counter).QnTemplate}`
-    counter=counter+5;
+    div.innerHTML = `${new Qn(sd[0], sd[1], sd[2], sd[3], sd[4], sd[5], counter).QnTemplate}`
+    counter = counter + 5;
     mainContainer.appendChild(div);
   }
   let sb = document.createElement("div");
@@ -136,11 +136,32 @@ function displayData() {
   mainContainer.appendChild(sb);
 }
 let nodeval;
-function grade(){
+let scores = 0;
+function grade() {
   const children = document.querySelectorAll('.question');
   children.forEach((node, index) => {
-    //if(){}
-    nodeval=node;
-		node.style.backgroundColor = "red";
-	});
+    let correct = false; let realans=ans1dict["Q" + (index + 1)][0];
+    let varr = node.children[0].children[0].children;
+    for (var childi = 0; childi < varr.length; childi++) {
+      let child = varr[childi]
+      //console.log([child.value,child.checked,ans1dict["Q"+(index+1)][0]]); 
+      if (child.checked) {
+        if (child.value == realans) {
+          correct = true;
+          scores++; 
+        } else {
+        }
+      }
+    }
+    if (correct) {
+      node.style.backgroundColor = "green";
+    }
+    else {
+      node.style.backgroundColor = "red";
+      let sb = document.createElement("div");
+      sb.innerHTML = `<p>correct answer is ${realans.substr(1)}</p>`
+      sb.style.backgroundColor="yellow";
+      node.appendChild(sb)
+    }
+  });
 }
