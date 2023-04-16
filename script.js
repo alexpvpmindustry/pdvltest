@@ -28,7 +28,7 @@ function shuffle(array) {
   return array;
 }
 
-let randomOrder = Array(20).fill().map((x,i)=>i);
+let randomOrder = Array(3).fill().map((x,i)=>i);
 function startTest() {
   let radioval = getRadioValue();
   blockRadio();
@@ -42,12 +42,12 @@ function startTest() {
     }
   }
   if (radioval==1){
-    fetchdata('sample1.json',false);
-    fetchdata('sample1ans.json',true);
+    fetchdata('sample3.json',false);
+    fetchdata('sample3ans.json',true);
   }
   if (radioval==2){
-    fetchdata('sample2.json',false);
-    fetchdata('sample2ans.json',true);
+    fetchdata('sample3.json',false);
+    fetchdata('sample3ans.json',true);
   } 
   let startbutton = document.getElementById("start");
   startbutton.disabled =true;
