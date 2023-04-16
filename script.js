@@ -56,7 +56,7 @@ function startTest() {
   startbutton.disabled = true;
   document.getElementById("start").innerText = "test started";
   let restartbutton = document.getElementById("restart");
-  restartbutton.style.display = "block";
+  restartbutton.style.display = "block"; 
   startTimer();
 }
 
