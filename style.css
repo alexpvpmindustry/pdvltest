@@ -84,6 +84,21 @@ body {
 	margin-left: 2vw;
 }
 
+ol li {
+	list-style: none;
+	position: relative;
+	padding: 5px 5px 5px 25px;
+	margin-bottom: 10px;
+	margin-top: 15px;
+  }
+  
+  ol li::before {
+	content: "✅";
+	position: absolute;
+	top: 6px;
+	left: 0;
+  }
+
 .animate {
 	animation-duration: 0.7s;
 	animation-name: animate-fade;
