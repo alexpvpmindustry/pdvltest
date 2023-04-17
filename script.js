@@ -5,7 +5,7 @@ function startTimer() {
   //var countDownDate = new Date().getTime() + 4000 ;//+ 30 * 60 * 1000; // 4 sec
   var x = setInterval(function () {
     var now;
-    if (!endedTest) { now = new Date().getTime(); } else { now = endTime;}
+    if (!endedTest) { now = new Date().getTime(); } else { now = endTime; }
     var distance = countDownDate - now;
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -56,7 +56,7 @@ function startTest() {
   startbutton.disabled = true;
   document.getElementById("start").innerText = "test started";
   let restartbutton = document.getElementById("restart");
-  restartbutton.style.display = "block"; 
+  restartbutton.style.display = "block";
   startTimer();
 }
 
@@ -165,12 +165,12 @@ function grade() {
     node.style.borderWidth = "thick";
     if (correct) {
       node.style.borderColor = "rgba(50,255,50,0.8)";
-      node.style.backgroundColor= "rgba(50,255,50,0.2)";
+      node.style.backgroundColor = "rgba(50,255,50,0.2)";
     }
     else {
       node.style.borderColor = "rgba(255,50,50,0.8)";
-      node.style.backgroundColor= "rgba(255,50,50,0.2)";
-      
+      node.style.backgroundColor = "rgba(255,50,50,0.2)";
+
       let sb = document.createElement("div");
       sb.innerHTML = `<p>correct answer is ${realans.substr(1)}</p>`
       sb.style.backgroundColor = "yellow";
@@ -192,3 +192,32 @@ function grade() {
   finalscore.style.display = "block";
 
 }
+
+
+function fillfootercontent() {
+  let ftc = document.getElementById("footercontent");
+  let social0 = document.createElement("div");
+  social0.innerHTML = `
+  <br>
+  <p>Support our work. Buy me a <a href="https://www.buymeacoffee.com/alexservers"
+      style="color: aquamarine;">☕coffee☕</a> .</p>
+  <p>Submit your own questions. <a href="mailto:alex.mindustry+pdvl@gmail.com" style="color: aquamarine;">Email</a>.
+  </p>
+  <p>Back to landing page. <a href="./index.html" style="color: aquamarine;">Here</a>.</p>`
+  
+
+  let links = {};
+  links["./pdvlA.html"] = "PDVL Paper A, mock Exam.";
+  links["./top10tipsandtricks.html"] = "Top 10 tips and tricks to pass your PDVL exam.";
+  for (var key in links) {
+    let sb = document.createElement("div");
+    var str = links[key];
+    var lastIndex = str.lastIndexOf(" "); 
+    str = str.substring(0, lastIndex);
+    sb.innerHTML = str+` <a href=${key} style="color: #01af74;">${links[key].substring(lastIndex)}</a>`; 
+    ftc.append(sb);
+  }
+  ftc.append(social0);
+}
+
+
