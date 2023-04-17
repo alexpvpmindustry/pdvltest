@@ -198,30 +198,81 @@ function docEleDiv(strr){
   ele.innerHTML=strr;
   return ele;
 }
+function getLinks(){
+  let links = {};
+  links["./pdvlA.html"] = "PDVL Paper A, mock Exam.";
+  links["./top10tipsandtricks.html"] = "Top 10 tips and tricks to pass your PDVL exam.";
+  links["./pdvl-application-process.html"] = "Application Process PDVL";
+  links["./pdvl-faq.html"] = "Common PDVL and TDVL questions, FAQ";
+  links["./pdvl-medical-check-up.html"] = "PDVL Medical Check-up";
+  links["./pdvl-regulations.html"] = "PDVL Insurance Requirements";
+  links["./pdvl-renewal-process.html"] = "PDVL Renewal Fee";
+  links["./pdvl-test-preparation.html"] = "PDVL Test Preparation Notes";
+  links["./pdvl-training-courses.html"] = "PDVL Course Providers";
+  links["./pdvl-vs-tdvl.html"] = "PDVL VS TDVL, which is better?";
+  return links;
+}
 
-function fillfootercontent() {
+function selectElements(dictionary, maxlimit) {
+  if (maxlimit >= Object.keys(dictionary).length) {
+    return dictionary;
+  }
+  var selected = {};
+  var count = 0;
+  var keys = Object.keys(dictionary);
+  shuffleArray(keys); // Shuffle the keys array
+  for (var i = 0; i < keys.length; i++) {
+    if (count < maxlimit) {
+      selected[keys[i]] = dictionary[keys[i]];
+      count++;
+    } else {
+      break;
+    }
+  }
+  return selected;
+}
+
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+function addTagsToRandomWord(sentence, linkkk) {
+  var words = sentence.split(' ');
+  var randomIndex = Math.floor(Math.random() * words.length);
+  var randomWord = words[randomIndex];
+  words[randomIndex] = `<a href=${linkkk} style="color: #01af74;">` + randomWord + '</a>';
+  var newSentence = words.join(' ');
+  return newSentence;
+}
+
+function fillfootercontent(maxlinks) {
   let ftc = document.getElementById("footercontent");
+  let linklist =getLinks();
+  let links = selectElements(linklist,maxlinks);
+  let headerr= docEleDiv(`<h3>Suggested pages</h3>`);
+  ftc.append(headerr);
+  for (var key in links) {
+    let sb = document.createElement("div");
+    var str = links[key];
+    //var lastIndex = str.lastIndexOf(" "); 
+    //str = str.substring(0, lastIndex);
+    //sb.innerHTML = str+` <a href=${key} style="color: #01af74;">${links[key].substring(lastIndex)}</a>`;
+    sb.innerHTML = addTagsToRandomWord(str, key)
+    ftc.append(sb);
+  } 
+  let headerr2= docEleDiv(`<br><h3> </h3><img src="icons3.png" style="width:45vw; max-width: 40%;" alt="social media icons">`);
+  ftc.append(headerr2);
   let social0 = docEleDiv(`
   <p>Support our work. Buy us a <a href="https://www.buymeacoffee.com/alexservers"
       style="color: aquamarine;">☕coffee☕</a> .</p>
   <p>Submit your own questions. <a href="mailto:alex.mindustry+pdvl@gmail.com" style="color: aquamarine;">Email</a>.
   </p>
   <p>Back to landing page. <a href="./index.html" style="color: aquamarine;">Here</a>.</p><br>`);
-  let links = {};
-  links["./pdvlA.html"] = "PDVL Paper A, mock Exam.";
-  links["./top10tipsandtricks.html"] = "Top 10 tips and tricks to pass your PDVL exam.";
-  let headerr= docEleDiv(`<h3>Suggested pages</h3>`);
-  ftc.append(headerr);
-  for (var key in links) {
-    let sb = document.createElement("div");
-    var str = links[key];
-    var lastIndex = str.lastIndexOf(" "); 
-    str = str.substring(0, lastIndex);
-    sb.innerHTML = str+` <a href=${key} style="color: #01af74;">${links[key].substring(lastIndex)}</a>`; 
-    ftc.append(sb);
-  } 
-  let headerr2= docEleDiv(`<br><h3> </h3><img src="icons3.png" style="width:45vw; max-width: 40%;" alt="social media icons">`);
-  ftc.append(headerr2);
   ftc.append(social0);
 }
 
