@@ -193,22 +193,25 @@ function grade() {
 
 }
 
+function docEleDiv(strr){
+  let ele = document.createElement("div");
+  ele.innerHTML=strr;
+  return ele;
+}
 
 function fillfootercontent() {
   let ftc = document.getElementById("footercontent");
-  let social0 = document.createElement("div");
-  social0.innerHTML = `
-  <br>
-  <p>Support our work. Buy me a <a href="https://www.buymeacoffee.com/alexservers"
+  let social0 = docEleDiv(`
+  <p>Support our work. Buy us a <a href="https://www.buymeacoffee.com/alexservers"
       style="color: aquamarine;">☕coffee☕</a> .</p>
   <p>Submit your own questions. <a href="mailto:alex.mindustry+pdvl@gmail.com" style="color: aquamarine;">Email</a>.
   </p>
-  <p>Back to landing page. <a href="./index.html" style="color: aquamarine;">Here</a>.</p>`
-  
-
+  <p>Back to landing page. <a href="./index.html" style="color: aquamarine;">Here</a>.</p><br>`);
   let links = {};
   links["./pdvlA.html"] = "PDVL Paper A, mock Exam.";
   links["./top10tipsandtricks.html"] = "Top 10 tips and tricks to pass your PDVL exam.";
+  let headerr= docEleDiv(`<h3>Suggested pages</h3>`);
+  ftc.append(headerr);
   for (var key in links) {
     let sb = document.createElement("div");
     var str = links[key];
@@ -216,7 +219,9 @@ function fillfootercontent() {
     str = str.substring(0, lastIndex);
     sb.innerHTML = str+` <a href=${key} style="color: #01af74;">${links[key].substring(lastIndex)}</a>`; 
     ftc.append(sb);
-  }
+  } 
+  let headerr2= docEleDiv(`<br><h3> </h3><img src="icons3.png" style="width:45vw; max-width: 40%;" alt="social media icons">`);
+  ftc.append(headerr2);
   ftc.append(social0);
 }
 
