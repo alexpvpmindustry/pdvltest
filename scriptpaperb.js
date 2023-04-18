@@ -43,14 +43,14 @@ function startTest() {
   // }
   if (radioval == 1) {
     fetchdata('paperb1.txt', false);
-    fetchdata('sample1ans.json', true);
+    //fetchdata('sample1ans.json', true);
   }
   if (radioval == 2) {
-    fetchdata('paperb3.txt', false);
-    fetchdata('sample2ans.json', true);
+    fetchdata('paperb2.txt', false);
+    //fetchdata('sample2ans.json', true);
   }
   if (radioval == 3) {
-    fetchdata('./paperb3.json', false);
+    fetchdata('paperb3.txt', false);
     //fetchdata('sample2ans.json', true);
   }
   let startbutton = document.getElementById("start");
@@ -96,17 +96,10 @@ let ans1dict = {};
 let passScore = 17;
 function fetchdata(file, ans) {
   fetch(file)
-    .then(function (response) {
-      console.log("100");
-      //console.log(response.json());
-      //return response.json();
+    .then(function (response) { 
+      return response.text();
     })
     .then(function (data) {
-      console.log("105"+data);
-    })
-    .then(function (data) {
-      console.log("108");
-      console.log(data);
       if (!ans) {
         appendData(data);
         displayData();
@@ -121,10 +114,13 @@ function fetchdata(file, ans) {
 }
 
 function appendData(data) {
-  console.log(data);
-  for (let ii = 0; ii < data.length; ii++) {
-    let i = randomOrder[ii];
-    sample1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], data[i].A1, data[i].A2, data[i].A3, data[i].A4, "Q" + (ii + 1), "Q" + (i + 1)]
+  let qnsss = data.split("\n");
+  for (let ii = 0; ii < qnsss.length; ii++) {
+    let qnum = ii+1;
+    let sep = qnsss[ii].split(";")
+    console.log(qnum+"  "+sep.length+"  "+sep)
+    //let i = randomOrder[ii];
+    //sample1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], data[i].A1, data[i].A2, data[i].A3, data[i].A4, "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function appendAnsData(data) {
