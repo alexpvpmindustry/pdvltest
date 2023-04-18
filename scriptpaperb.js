@@ -18,37 +18,38 @@ function startTimer() {
   }, 100);
 }
 function shuffle(array) {
-  let currentIndex = array.length, randomIndex;
-  // While there remain elements to shuffle.
-  while (currentIndex != 0) {
-    // Pick a remaining element.
+  let currentIndex = array.length, randomIndex; 
+  while (currentIndex != 0) { 
     randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-    // And swap it with the current element.
+    currentIndex--; 
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]];
   }
   return array;
 }
 
-let randomOrder = Array(20).fill().map((x, i) => i);
+let randomOrder = Array(100).fill().map((x, i) => i);
 function startTest() {
   let radioval = getRadioValue();
   blockRadio();
-  if (radioval == 3) {
-    shuffle(randomOrder);
-    if (Math.random() < 0.5) {
-      radioval = 1;
-    }
-    else {
-      radioval = 1;
-    }
-  }
+  // if (radioval == 3) {
+  //   shuffle(randomOrder);
+  //   if (Math.random() < 0.5) {
+  //     radioval = 1;
+  //   }
+  //   else {
+  //     radioval = 1;
+  //   }
+  // }
   if (radioval == 1) {
     fetchdata('sample1.json', false);
     fetchdata('sample1ans.json', true);
   }
   if (radioval == 2) {
+    fetchdata('sample2.json', false);
+    fetchdata('sample2ans.json', true);
+  }
+  if (radioval == 3) {
     fetchdata('sample2.json', false);
     fetchdata('sample2ans.json', true);
   }
@@ -64,7 +65,6 @@ function getRadioValue() {
   var ele = document.getElementsByName('radios');
   for (i = 0; i < ele.length; i++) {
     if (ele[i].checked) {
-      //document.getElementById("resultss").innerHTML = "selected: " + ele[i].value;
       return ele[i].value
     }
   }
@@ -113,6 +113,7 @@ function fetchdata(file, ans) {
 }
 
 function appendData(data) {
+  console.log(data);
   for (let ii = 0; ii < data.length; ii++) {
     let i = randomOrder[ii];
     sample1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], data[i].A1, data[i].A2, data[i].A3, data[i].A4, "Q" + (ii + 1), "Q" + (i + 1)]
