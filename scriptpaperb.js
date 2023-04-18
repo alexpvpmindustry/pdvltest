@@ -1,5 +1,6 @@
 let endedTest = false;
 let endTime;
+let mapped_ans = {'A':"A1",'B':"A2",'C':"A3",'D':"A4"};
 function startTimer() {
   var countDownDate = new Date().getTime() + 2000 + 30 * 60 * 1000; // 30 minutes from now
   //var countDownDate = new Date().getTime() + 4000 ;//+ 30 * 60 * 1000; // 4 sec
@@ -121,13 +122,14 @@ function appendData(data) {
     sample1dict["Q" + (ii + 1)] = [sep[0], sep[1], sep[2], sep[3], sep[4], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
-let mapped_ans = {"A":"A1","B":"A2","C":"A3","D":"A4"};
+let qnss;
 function appendAnsData(data) {
-  let qnsss = data.split("\n");
+  qnsss = data.split("\n");
   for (let ii = 0; ii < qnsss.length; ii++) {
     let i = randomOrder[ii];
-    console.log(qnsss[ii]+mapped_ans[qnsss[ii]])
-    ans1dict["Q" + (ii + 1)] = [ mapped_ans[qnsss[ii]], "Q" + (ii + 1), "Q" + (i + 1)]
+    let keyy = qnsss[ii][0]
+    //console.log(keyy+mapped_ans[keyy]+(keyy=='A'))
+    ans1dict["Q" + (ii + 1)] = [ mapped_ans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function displayData() {
