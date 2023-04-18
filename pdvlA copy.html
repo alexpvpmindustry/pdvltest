@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PDVL Paper A Test Singapore SG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="This website is a simulation for PDVL paper A. For individuals who want to become private hire drivers in Singapore.">
+  <!-- <meta name="keywords" content="Singapore, private hire, driver, test, sp test pdvl, singapore poly pdvl"> -->
+  <meta name="keywords"
+    content="PDVL paper A, PDVL Singapore, private hire car driver's vocational licence, PDVL test simulator, PDVL mock test, PDVL exam preparation, PDVL test format, PDVL test questions, PDVL study materials, PDVL regulations">
+
+  <meta name="author" content="alex mindustry tan">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- import Material Icons from Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Import Material styles -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css">
+  <!-- Import my custom styles -->
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z04E9PWYR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z04E9PWYR1');
+  </script>
+</head>
+
+<body class="mdc-typography" id="container">
+  <h1 class="mdc-typography--headline3">PDVL Paper A Test Simulation</h1>
+  <p>Time limit = 30mins</p>
+  <p>Number of questions = 20</p>
+  <div class="mdc-form-field">
+    <p class="">Question type:</p>
+    <div class="mdc-radio padding_lr_5">
+      <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" value="1" checked>
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+      <div class="mdc-radio__ripple"></div>
+    </div>
+    <label for="radio-1">Sample 1</label>
+    <div class="mdc-radio padding_lr_5">
+      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" value="2">
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+      <div class="mdc-radio__ripple"></div>
+    </div>
+    <label for="radio-1">Sample 2</label>
+    <div class="mdc-radio padding_lr_5">
+      <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios" value="3">
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+      <div class="mdc-radio__ripple"></div>
+    </div>
+    <label for="radio-1">Random</label>
+  </div>
+  <br>
+  <div>
+    <button class="mdc-button mdc-button--raised" id="start" onclick="startTest();">
+      Press to start
+    </button>
+    <a href="./index.html">
+      <div style="display: block;font-weight: bold ;color:rgba(255, 0, 0, 0.651);text-align: right;padding-right: 5%;"
+        id="restart22">
+        GO BACK
+      </div>
+    </a>
+    <div style="display: none;font-weight: bold ;color:rgba(255, 0, 0, 0.651);text-align: right;padding-right: 5%;"
+      id="restart" onclick="location.reload()">
+      <a href="">START AGAIN</a>
+    </div>
+  </div>
+  <div id="clock" class="float my-float animate">30:01</div>
+  <p id="resultss" style="display: none;"> selected radio </p>
+  <p id="result1" style="display: block;"></p>
+  <br><br>
+  <div class="footer">
+    <div id="footercontent">
+    </div>
+  </div>
+  <script>(function () { fillfootercontent(3); })();</script>
+</body>
+
+<!-- Import Material scripts -->
+<script src="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.js"></script>
+<!--  Import my scripts  -->
+<script src="./components.js"></script>
+
+</html>
