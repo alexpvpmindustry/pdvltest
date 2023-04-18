@@ -42,16 +42,16 @@ function startTest() {
   //   }
   // }
   if (radioval == 1) {
-    fetchdata('sample1.json', false);
+    fetchdata('paperb1.txt', false);
     fetchdata('sample1ans.json', true);
   }
   if (radioval == 2) {
-    fetchdata('sample2.json', false);
+    fetchdata('paperb3.txt', false);
     fetchdata('sample2ans.json', true);
   }
   if (radioval == 3) {
-    fetchdata('sample2.json', false);
-    fetchdata('sample2ans.json', true);
+    fetchdata('./paperb3.json', false);
+    //fetchdata('sample2ans.json', true);
   }
   let startbutton = document.getElementById("start");
   startbutton.disabled = true;
@@ -97,9 +97,16 @@ let passScore = 17;
 function fetchdata(file, ans) {
   fetch(file)
     .then(function (response) {
-      return response.json();
+      console.log("100");
+      //console.log(response.json());
+      //return response.json();
     })
     .then(function (data) {
+      console.log("105"+data);
+    })
+    .then(function (data) {
+      console.log("108");
+      console.log(data);
       if (!ans) {
         appendData(data);
         displayData();
@@ -108,6 +115,7 @@ function fetchdata(file, ans) {
       }
     })
     .catch(function (err) {
+      console.log("115");
       console.log('error: ' + err);
     });
 }
