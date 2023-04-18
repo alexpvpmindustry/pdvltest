@@ -1,4 +1,4 @@
-Private hire cars are permitted to ____.;pick up from taxi stands;pick-up street-hail passenger;display rates of hire;pick-up pre-booked job
+Private hire cars are permitted to ____.;pick up from taxi stands;pick up street-hail passenger;display rates of hire;pick up pre-booked job
 Private hire cars are permitted to pick-up ____.;within 9 metres of a bus stop;taxi stands;full-day bus lanes;building driveway
 A chauffeured private hire car can pick up and drop off passengers at ____.;building driveway with permission;bus stops and bus lanes during non-bus lane operation hours;bus lanes during bus lane operation hours ;all of the above
 Chauffeured service includes ____.;job received via booking apps;hotel concierge sending a text message for driver to pick up hotel guest;passengers calls for chauffeured service;all of the above

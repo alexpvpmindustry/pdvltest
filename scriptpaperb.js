@@ -107,8 +107,7 @@ function fetchdata(file, ans) {
         appendAnsData(data);
       }
     })
-    .catch(function (err) {
-      console.log("115");
+    .catch(function (err) { 
       console.log('error: ' + err);
     });
 }
@@ -118,9 +117,9 @@ function appendData(data) {
   for (let ii = 0; ii < qnsss.length; ii++) {
     let qnum = ii+1;
     let sep = qnsss[ii].split(";")
-    console.log(qnum+"  "+sep.length+"  "+sep)
-    //let i = randomOrder[ii];
-    //sample1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], data[i].A1, data[i].A2, data[i].A3, data[i].A4, "Q" + (ii + 1), "Q" + (i + 1)]
+    //console.log(qnum+"  "+sep.length+"  "+sep)
+    let i = randomOrder[ii];
+    sample1dict["Q" + (ii + 1)] = [sep[0], sep[1], sep[2], sep[3], sep[4], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function appendAnsData(data) {
