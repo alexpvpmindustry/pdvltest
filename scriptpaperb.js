@@ -43,15 +43,15 @@ function startTest() {
   // }
   if (radioval == 1) {
     fetchdata('paperb1.txt', false);
-    //fetchdata('sample1ans.json', true);
+    fetchdata('paperb1ans.txt', true);
   }
   if (radioval == 2) {
     fetchdata('paperb2.txt', false);
-    //fetchdata('sample2ans.json', true);
+    fetchdata('paperb2ans.txt', true);
   }
   if (radioval == 3) {
     fetchdata('paperb3.txt', false);
-    //fetchdata('sample2ans.json', true);
+    fetchdata('paperb3ans.txt', true);
   }
   let startbutton = document.getElementById("start");
   startbutton.disabled = true;
@@ -114,18 +114,20 @@ function fetchdata(file, ans) {
 
 function appendData(data) {
   let qnsss = data.split("\n");
-  for (let ii = 0; ii < qnsss.length; ii++) {
-    let qnum = ii+1;
+  for (let ii = 0; ii < qnsss.length; ii++) { 
     let sep = qnsss[ii].split(";")
     //console.log(qnum+"  "+sep.length+"  "+sep)
     let i = randomOrder[ii];
     sample1dict["Q" + (ii + 1)] = [sep[0], sep[1], sep[2], sep[3], sep[4], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
+let mapped_ans = {"A":"A1","B":"A2","C":"A3","D":"A4"};
 function appendAnsData(data) {
-  for (let ii = 0; ii < data.length; ii++) {
+  let qnsss = data.split("\n");
+  for (let ii = 0; ii < qnsss.length; ii++) {
     let i = randomOrder[ii];
-    ans1dict["Q" + (ii + 1)] = [data[i]["Q" + (i + 1)], "Q" + (ii + 1), "Q" + (i + 1)]
+    console.log(qnsss[ii]+mapped_ans[qnsss[ii]])
+    ans1dict["Q" + (ii + 1)] = [ mapped_ans[qnsss[ii]], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function displayData() {
@@ -153,7 +155,7 @@ function grade() {
   endedTest = true;
   const children = document.querySelectorAll('.question');
   children.forEach((node, index) => {
-    let correct = false; let realans = ans1dict["Q" + (index + 1)][0];
+    let correct = false; let realans = ans1dict["Q" + (index + 1)][0]; 
     let varr = node.children[0].children[0].children;
     for (var childi = 0; childi < varr.length; childi++) {
       let child = varr[childi]
