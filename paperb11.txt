@@ -1,0 +1,31 @@
+What is the penalty of disobeying traffic direction of police officer engaged in regulating traffic?;4 demerit points, fine $150;3 demerit points, fine $120;3 demerit points, fine $150;4 demerit points, fine $200
+What is the penalty of stopping in a zebra crossing-controlled area?;fine $150;3 demerit points, fine $150;3 demerit points;Court action
+What is the penalty of using tyre/s with ply or cord carcass exposed?;fine $150;3 demerit points, fine $150;3 demerit points;Court action
+What is the penalty for crossing a road divider?;3 demerit points, fine $150;4 demerit points, fine $150;6 demerit points, fine $200;Court Action
+What is the penalty for failing to give way to an ambulance, fire engine or police vehicle?;3 demerit points, fine $150;4 demerit points, fine $150;6 demerit points, fine $200;Court Action
+Carrying passenger on a motor vehicle or trailer in a dangerous manner will result in ____.;6 demerit points, fine $200;4 demerit points, fine $150;8 demerit points, fine $300;12 demerit points, fine $400
+What is the penalty for parking within 9 metres of a bus stop?;$50 fine;$100 fine;$120 fine;$130 fine
+Driving without due care and consideration without hurt carries a penalty of ____.;4 demerit points, fine $150;8 demerit points, fine $300;6 demerit points, fine $200;12 demerit points, fine $400
+What is the penalty for driving without due care or reasonable consideration where hurt is caused?;6 demerit points and fine $200;8 demerit points and fine $300;9 demerit points and fine $300;12 demerit points and fine $400
+What is the penalty for driving or riding against the flow of traffic as indicated by traffic signs?;6 demerit points and fine $200;8 demerit points and fine $300;12 demerit points and fine $400;18 demerit points and court action
+What is the penalty for failing to allow free and uninterrupted passage to pedestrians?;4 demerit points and fine $150;6 demerit points and fine $200;12 demerit points and fine $400;Fine $100
+Using a motor vehicle where a person below 1.35 metres in height is a passenger and is not properly secured by an approved child restraint or body restraining seat belt will result in ____.;3 demerit points, fine $150;3 demerit points, fine $100;4 demerit points, fine $150;4 demerit points, fine $200
+Failing to give way to oncoming traffic at controlled junction will result in ____.;4 demerit points only;4 demerit points, fine $150;6 demerit points, fine $200;Court Action
+Obstructing the flow of traffic carries ____.;4 demerit points only;4 demerit points, fine $150;6 demerit points, fine $200;Court Action
+Stopping on the shoulder or verge of an expressway will result in ____.;4 demerit points only;4 demerit points, fine $150;Fine $150 only;Court Action
+What is the penalty for parking within 3 metres of a fire hydrant?;$50 fine;$100 fine;$120 fine;$130 fine
+Exceeding the speed limit of a vehicle by 41 to 50km/h carries ____.;6 demerit points and fine $200;12 demerit points and fine $400;12 demerit points and court action;18 demerit points and court action
+Failing to conform to red light signals will result in ____.;12 demerit points with no fine;12 demerit points, fine $400;Fine $400;Court action
+What is the composition amount and demerit points awarded to the motorist when he drove across road divider or double while line?;4 demerit points and Fine $150;6 demerit points and Fine $200;3 demerit points and Fine $150;Not guilty
+Forming up incorrectly when turning left or right will result in ____.;4 demerit points and no fine;4 demerit points and Fine $150;Fine $150;Court action
+What penalty will you get when you park abreast of another vehicle?;Fine and demerit points;Warning only;Fine only;Demerit points and have to attend court
+Exceeding the speed limit of a vehicle by 61km/h carries ____.;6 demerit points and fine $200;12 demerit points and fine $400;24 demerit points and court actions;18 demerit points and court action
+What is the composition amount and demerit points awarded to the motorist when he failed to give way to pedestrian at pedestrian crossing?;4 demerit points and Fine $150;6 demerit points and Fine $200;8 demerit points and Fine $300;3 demerit points and Fine $150
+Which of the following carries a penalty of 3 demerit points and $150 fine?;Parking abreast of another vehicle;Driver failing to wear a seat belt;Using tyre/s with ply or cord carcass exposed;all of the above
+Which of the following carries a penalty of 4 demerit points and $150 fine?;Exceeding the speed limit of a vehicle by 1 to 20km/h;Failing to give way to an ambulance, fire engine or police vehicle;Stopping on the shoulder or verge of an expressway;all of the above
+Which of the following carries a penalty of 6 demerit points and $200 fine?;Driving against the flow of traffic as indicated by traffic signs;Failing to allow free and uninterrupted passage to pedestrian/s at pesdestrian crossing;Driving without due care or reasonable consideration where no hurt is caused;all of the above
+Which of the following carries a penalty of 8 demerit points and $300 fine?;Exceeding the speed limit of a vehicle by 21 to 30km/h;Exceeding the speed limit of a vehicle by 31 to 40km/h;Exceeding the speed limit of a vehicle by 41 to 50km/h;Exceeding the speed limit of a vehicle by 51 to 60km/h
+Which of the following carries a penalty of 9 demerit points and $300 fine?;Exceeding the speed limit of a vehicle by 31 to 40km/h;Failing to conform to red light signals;Driving without due care or reasonable consideration where hurt is caused;Using mobile communication device while driving
+Which of the following carries a penalty of 12 demerit points and $400 fine?;Failing to conform to red light signals;Exceeding the speed limit of a vehicle by 41 to 50km/h;Exceeding the speed limit of a vehicle by 51 to 60km/h;Reckless or dangerous driving
+Which of the following carry a fine of $100?;Stopping in a yellow box;Failing to stop a vehicle close to the edge of the left-hand side of the road;Parking with 3 metres of fire hydrant;All of the above
+Which of the following does not allow you to pick-up or drop-off passenger?;Continuous white line on the centre of the road;Continuous double white line on the centre of the road;Continuous double yellow line;Single yellow zig-zag line
