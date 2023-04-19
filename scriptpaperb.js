@@ -157,8 +157,8 @@ async function fetchdataDIPSdataMulti() {
 
 
 function appendDataDIPSdata(data) {
-  console.log("data")
-  console.log(data);
+  //console.log("data")
+  //console.log(data);
   let qnsss = data.split("\n");
   console.log(qnsss.length)
   for (let ii = 0; ii < qnsss.length; ii++) {
@@ -173,7 +173,7 @@ function compileDIPSdata() {// must fill in  ans1dict and sample1dict
     shuffle(ro);
     let as = get4ans(allans[ii]);
     let keyy = ro.indexOf(3);
-    console.log(ii+"  "+keyy)
+    //console.log(ii+"  "+keyy)
     sample1dict["Q" + (ii + 1)] = [DIPSdata[ii], as[ro[0]], as[ro[1]], as[ro[2]], as[ro[3]], "Q" + (ii + 1), "Q" + (i + 1)]
     ans1dict["Q" + (ii + 1)] = [mapped_DISPans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
   }
