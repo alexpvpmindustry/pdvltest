@@ -1,0 +1,11 @@
+Loitering for the purpose of soliciting for passengers;$500;12
+Soliciting for passengers;$500;12
+Driving a chauffeured private hire car without displaying an authorised decalcomania;$500;21
+Driving a chauffeured private hire car with an authorised decalcomania that is not properly affixed;$500;12
+Driving a chauffeured private hire car with an authorised covered decalcomania that is defaced, obscured or altered;$500;12
+Driving a chauffeured private hire car with an authorised decalcomania that is illegible;$500;12
+Driving a chauffeured private hire car with an authorised decalcomania that is discoloured by fading or otherwise;$500;12
+Affixing or causing to affix an authorised decalcomania on a chauffeured private hire car other than a chauffeured private hire car for which the marking was issued;$500;12
+Removing authorised decalcomania without authority;$500;21
+Affixing or displaying, or causing to be affixed or displayed, on a vehicle that is not a chauffeured private hire car a decalcomania or label with chauffeured private hire car marking;$500;12
+Plying, or causing or permitting, a chauffeured private hire car to ply for hire;Court action;21
