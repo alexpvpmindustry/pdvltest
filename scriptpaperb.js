@@ -29,7 +29,7 @@ function shuffle(array) {
   return array;
 }
 
-let randomOrder = Array(100).fill().map((x, i) => i);
+let randomOrder = Array(109).fill().map((x, i) => i);
 function startTest() {
   let radioval = getRadioValue();
   blockRadio();
@@ -53,6 +53,9 @@ function startTest() {
   if (radioval == 3) {
     fetchdata('paperb3.txt', false);
     fetchdata('paperb3ans.txt', true);
+  }
+  if (radioval == 4) {
+    fetchdataDIPSdataMulti();
   }
   let startbutton = document.getElementById("start");
   startbutton.disabled = true;
@@ -112,7 +115,35 @@ function fetchdata(file, ans) {
       console.log('error: ' + err);
     });
 }
+function fetchdataDIPSdataSingle(file){
+  fetch(file)
+  .then(function (response) { 
+    return response.text();
+  })
+  .then(function (data) { 
+    appendDataDIPSdata(data); 
+  })
+  .catch(function (err) { 
+    console.log('error: ' + err);
+  });
+}
+function fetchdataDIPSdataMulti(){
+  fetchdataDIPSdataSingle("Driver Improvement Points System (DIPS).txt");
+  fetchdataDIPSdataSingle("Non DIPS offences.txt");
+  fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Car and Taxi Drivers.txt");
+  fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Drivers.txt");
+  fetchdataDIPSdataSingle("Conduct Rule Offences (not under VLPS) - Private Hire Car Drivers.txt");
+  console.log(DIPSdata);
+  displayData(); 
+}
 
+let DIPSdata=[];
+function appendDataDIPSdata(data){
+  let qnsss = data.split("\r\n");
+  for (let ii = 0; ii < qnsss.length; ii++) {
+    DIPSdata.push(qnsss[ii]);
+  }
+}
 function appendData(data) {
   let qnsss = data.split("\n");
   for (let ii = 0; ii < qnsss.length; ii++) { 
@@ -122,9 +153,9 @@ function appendData(data) {
     sample1dict["Q" + (ii + 1)] = [sep[0], sep[1], sep[2], sep[3], sep[4], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
-let qnss;
+
 function appendAnsData(data) {
-  qnsss = data.split("\n");
+  let qnsss = data.split("\n");
   for (let ii = 0; ii < qnsss.length; ii++) {
     let i = randomOrder[ii];
     let keyy = qnsss[ii][0]
