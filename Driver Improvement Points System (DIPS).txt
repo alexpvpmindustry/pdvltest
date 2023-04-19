@@ -1,0 +1,45 @@
+Disobeying traffic directions of police officer, employee of Authority or security officer engaged in regulating traffic.;$150 and 3 points
+Driver failing to wear a seat belt.;$150 and 3 points
+Driver failing to ensure that every passenger wears a seat belt.;$150 and 3 points
+Driver failing to ensure that a passenger below the height of 1.35metres is not properly secured by an approved child restraint or body restraining seatbelt.;$150 and 3 points
+Parking within a demerit points no parking zone (any part of a road that is marked with a single yellow zig- zag line and includes the public footpath adjacent to the road).;$150 and 3 points
+Stopping within a demerit points no stopping zone (any part of a road that is marked with a double yellow zig-zag line and includes the public footpath adjacent to the road).;$150 and 3 points
+Parking abreast of another vehicle.;$150 and 3 points
+Parking within a pedestrian crossing.;$150 and 3 points
+Stopping in a zebra crossing-controlled area (any part of a road that is marked with a single white zig-zag line).;$150 and 3 points
+Conveying load that is not properly secured.;$150 and 3 points
+Using tyre/s with ply or cord carcass exposed.;$150 and 3 points
+Exceeding the speed limit of a vehicle by 1 to 20km/h.;$150 and 4 points
+Exceeding the speed limit of a road by 1 to 20km/h.;$150 and 4 points
+Failing to give way to oncoming traffic at controlled junction.;$150 and 4 points
+Failing to give way at uncontrolled junction.;$150 and 4 points
+Failing to give way at a junction.;$150 and 4 points
+Failing to give way at roundabout.;$150 and 4 points
+Crossing double white lines.;$150 and 4 points
+Crossing a road divider.;$150 and 4 points
+Obstructing the flow of traffic.;$150 and 4 points
+Failing to give way to an ambulance, fire engine or police vehicle.;$150 and 4 points
+Driving while carrying load on a motor vehicle in a dangerous manner.;$150 and 4 points
+Stopping on the shoulder or verge of an expressway.;$150 and 4 points
+Stopping or remaining at rest on the carriageway of an expressway.;$150 and 4 points
+Forming up incorrectly when turning left or right.;$150 and 4 points
+Driving or riding against the flow of traffic as indicated by traffic signs.;$200 and 6 points
+Driving on the shoulder of an expressway.;$200 and 6 points
+Exceeding the speed limit of a vehicle by 21 to 30km/h.;$200 and 6 points
+Exceeding the speed limit of a road by 21 to 30km/h.;$200 and 6 points
+Offences committed by motorists at a pedestrian crossing: a) Failing to give way to pedestrian/s. b) Unable to stop the vehicle before reaching a pedestrian crossing. c) Failing to allow free and uninterrupted passage to pedestrian/s. d) Failing to give way to pedestrian/s at a controlled intersection.;$200 and 6 points
+Driving without due care or reasonable consideration (where no hurt is caused).;$200 and 6 points
+Carrying passengers on a motor vehicle or trailer in a dangerous manner.;$200 and 6 points
+Reversing unnecessarily along an expressway.;$200 and 6 points
+Exceeding the speed limit of a vehicle by 31 to 40km/h.;$300 and 8 points
+Exceeding the speed limit of a road by 31 to 40km/h.;$300 and 8 points
+Driving without due care or reasonable consideration (where hurt is caused).;$300 and 9 points
+Failing to conform to red light signals.;$400 and 12 points
+Exceeding the speed limit of a vehicle by 41 to 50km/h.;Court action and 12 points
+Exceeding the speed limit of a road by 41 to 50km/h.;Court action and 12 points
+Using mobile communication device while driving.;Court action and 12 points
+Exceeding the speed limit of a vehicle by 51 to 60km/h.;Court action and 18 points
+Exceeding the speed limit of a road by 51 to 60km/h.;Court action and 18 points
+Exceeding the speed limit of a vehicle by more than 60km/h.;Court action and 24 points
+Exceeding the speed limit of a road by more than 60km/h.;Court action and 24 points
+Reckless or dangerous driving.;Court action and 24 points

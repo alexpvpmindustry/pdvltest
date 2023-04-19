@@ -1,0 +1,10 @@
+Parking within 3 metres of a fire hydrant;$100
+Parking within 6 metres of a junction;$100
+Parking within 9 metres of a bus stop;$100
+Stopping in a yellow box;$100
+Insufficient warning signal;$100
+Illegal U-turn;$100
+Driving in bus lane during bus lane operating hours;$130
+Failing to stop a vehicle close to the edge of the left- hand side of the road;$100
+Stopping a vehicle in such a manner as to cause unnecessary obstruction to other road users;$100
+Causing vehicle to remain at rest on a road in a position that is likely to cause undue inconvenience to other road users;$300
