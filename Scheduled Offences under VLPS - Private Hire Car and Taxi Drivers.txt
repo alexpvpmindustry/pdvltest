@@ -1,25 +1,25 @@
-Using, causing or permitting a motor vehicle to be used as a chauffeured private hire car or taxi when there is no public service vehicle licence authorising such use;Court action;21
-Driving chauffeured private hire car or taxi with expired vocational licence;
-Permitting chauffeured private hire car to be driven by driver whose vocational licence is under suspension or by unlicensed driver;Court action;21
-Driving chauffeured private hire car whilst vocational licence is suspended;Court action;21
-Permitting any other person to use, or have in that other person's possession, his vocational licence;$500;21
-Using, wearing or having in his possession the vocational licence of another person;$200;21
-Installing, or causing or permitting to be installed, audio recording equipment in or on a chauffeured private hire car or taxi;$500;21
-Using, or causing or permitting to be used, audio recording equipment installed in or on a chauffeured private hire car or taxi to record sounds within the vehicle without permission;$500;21
-Installing, or causing or permitting to be installed, visual recording equipment in or on a chauffeured private hire car or taxi;$500;21
-Using, or causing or permitting to be used, visual recording equipment installed in or on a chauffeured private hire car or taxi to make a visual recording within the vehicle without permission;$500;21
-Disclosing, or causing or allowing to be disclosed, a visual recording made of any person or thing, or the occurrence of any incident, within a chauffeured private hire car or taxi;$500;21
-Causing hurt to passenger in chauffeured private hire car through carelessness or wilful misbehaviour;$200;5
-Verbally insulting, intimidating or harassing a passenger in a sexual manner;$200;5
-Terminating hiring of chauffeured private hire car, or requiring passenger to leave chauffeured private hire car, without reasonable excuse, before passenger is conveyed to destination;$200;5
-Obstructing or obscuring the front windscreen of a chauffeured private car or taxi;$200;5
-Obstructing Registrar or authorised officer in the exercise of his power and duty to examine chauffeured private hire car or taxi;$100;3
-Failing to surrender vocational licence upon suspension or cancellation of vocational licence;$100;3
-Verbally insulting, intimidating or harassing a passenger (other than in a sexual manner);$100;3
-Failing to deposit property left in the vehicle in the manner required (for more than 24 hours but less than 7 days);$200;5
-Failing to deposit property left in the vehicle in the manner required (for more than 7 days);$500;21
-Intentionally taking booking from on-demand passenger transport service from unauthorised provider of ride-hail service;$300;6
-Taking from passenger ride-hail fare inconsistent with ride-hail fare policy (by $20 or more);$500;21
-Taking from passenger ride-hail fare inconsistent with ride-hail fare policy (by less than $20);$500;12
-Taking from passenger rail-hail fare more than ride hail fare last published by the ride-hail service licensee for ride-hail service (by $20 or more);$500;21
-Taking from passenger rail-hail fare more than ride hail fare last published by the ride-hail service licensee for ride-hail service (by less than $20);$500;12
+Using, causing or permitting a motor vehicle to be used as a chauffeured private hire car or taxi when there is no public service vehicle licence authorising such use;Court action and 21 points
+Driving chauffeured private hire car or taxi with expired vocational licence;Court action and 21 points
+Permitting chauffeured private hire car to be driven by driver whose vocational licence is under suspension or by unlicensed driver;Court action and 21 points
+Driving chauffeured private hire car whilst vocational licence is suspended;Court action and 21 points
+Permitting any other person to use, or have in that other person's possession, his vocational licence;$500 and 21 points
+Using, wearing or having in his possession the vocational licence of another person;$200 and 5 points
+Installing, or causing or permitting to be installed, audio recording equipment in or on a chauffeured private hire car or taxi;$500 and 21 points
+Using, or causing or permitting to be used, audio recording equipment installed in or on a chauffeured private hire car or taxi to record sounds within the vehicle without permission;$500 and 21 points
+Installing, or causing or permitting to be installed, visual recording equipment in or on a chauffeured private hire car or taxi;$500 and 21 points
+Using, or causing or permitting to be used, visual recording equipment installed in or on a chauffeured private hire car or taxi to make a visual recording within the vehicle without permission;$500 and 21 points
+Disclosing, or causing or allowing to be disclosed, a visual recording made of any person or thing, or the occurrence of any incident, within a chauffeured private hire car or taxi;$500 and 21 points
+Causing hurt to passenger in chauffeured private hire car through carelessness or wilful misbehaviour;$200 and 5 points
+Verbally insulting, intimidating or harassing a passenger in a sexual manner;$200 and 5 points
+Terminating hiring of chauffeured private hire car, or requiring passenger to leave chauffeured private hire car, without reasonable excuse, before passenger is conveyed to destination;$200 and 5 points
+Obstructing or obscuring the front windscreen of a chauffeured private car or taxi;$200 and 5 points
+Obstructing Registrar or authorised officer in the exercise of his power and duty to examine chauffeured private hire car or taxi;$100 and 3 points
+Failing to surrender vocational licence upon suspension or cancellation of vocational licence;$100 and 3 points
+Verbally insulting, intimidating or harassing a passenger (other than in a sexual manner);$100 and 3 points
+Failing to deposit property left in the vehicle in the manner required (for more than 24 hours but less than 7 days);$200 and 5 points
+Failing to deposit property left in the vehicle in the manner required (for more than 7 days);$500 and 21 points
+Intentionally taking booking from on-demand passenger transport service from unauthorised provider of ride-hail service;$300 and 6 points
+Taking from passenger ride-hail fare inconsistent with ride-hail fare policy (by $20 or more);$500 and 21 points
+Taking from passenger ride-hail fare inconsistent with ride-hail fare policy (by less than $20);$500 and 12 points
+Taking from passenger rail-hail fare more than ride hail fare last published by the ride-hail service licensee for ride-hail service (by $20 or more);$500 and 21 points
+Taking from passenger rail-hail fare more than ride hail fare last published by the ride-hail service licensee for ride-hail service (by less than $20);$500 and 12 points
