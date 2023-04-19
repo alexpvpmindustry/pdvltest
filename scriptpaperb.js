@@ -64,8 +64,7 @@ function startTest() {
   }
   if (radioval == 4) {
     fetchdataDIPSdataMulti();
-    compileDIPSdata();
-    displayData();
+
   }
   let startbutton = document.getElementById("start");
   startbutton.disabled = true;
@@ -135,19 +134,24 @@ function fetchdataDIPSdataSingle(file) {
       console.log('error: ' + err);
     });
 } 
-
+let text;
 async function fetchdataDIPSdataMulti() {
-  //await fetchdataDIPSdataSingle("Driver Improvement Points System (DIPS).txt");
-  await fetchdataDIPSdataSingle("Non DIPS offences.txt");
-  //await fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Car and Taxi Drivers.txt");
-  //await fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Drivers.txt");
-  //await fetchdataDIPSdataSingle("Conduct Rule Offences (not under VLPS) - Private Hire Car Drivers.txt"); 
-  // compileDIPSdata();
-  // displayData();
+  let text0 = await fetch("b1_Driver Improvement Points System (DIPS).txt"); 
+  appendDataDIPSdata(await text0.text())
+  let text1 = await fetch("b2_Non DIPS offences.txt"); 
+  appendDataDIPSdata(await text1.text())
+  let text2 = await fetch("b3_Scheduled Offences under VLPS - Private Hire Car and Taxi Drivers.txt"); 
+  appendDataDIPSdata(await text2.text())
+  let text3 = await fetch("b4_Scheduled Offences under VLPS - Private Hire Drivers.txt"); 
+  appendDataDIPSdata(await text3.text())
+  let text4 = await fetch("b5_Conduct Rule Offences (not under VLPS) - Private Hire Car Drivers.txt"); 
+  appendDataDIPSdata(await text4.text())
+  compileDIPSdata();
+  displayData();
 }
 
 
-function appendDataDIPSdata(data) {
+function appendDataDIPSdata(data) { 
   let qnsss = data.split("\r\n");
   for (let ii = 0; ii < qnsss.length; ii++) {
     allans.push(qnsss[ii].split(";")[1])
@@ -155,13 +159,13 @@ function appendDataDIPSdata(data) {
   }
 }
 function compileDIPSdata() {// must fill in  ans1dict and sample1dict
-  setAllAns = Array.from(new Set(allans));
-  console.log("starting compile with "+setAllAns.length)
+  setAllAns = Array.from(new Set(allans)); 
   for (let ii = 0; ii < DIPSdata.length; ii++) {
     let ro = [0, 1, 2, 3]; // random order
     shuffle(ro);
     let as = get4ans(allans[ii]);
     let keyy = ro.indexOf(3);
+    console.log(ii+"  "+keyy)
     sample1dict["Q" + (ii + 1)] = [DIPSdata[ii], as[ro[0]], as[ro[1]], as[ro[2]], as[ro[3]], "Q" + (ii + 1), "Q" + (i + 1)]
     ans1dict["Q" + (ii + 1)] = [mapped_DISPans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
   }
@@ -256,12 +260,12 @@ function grade() {
   const finalscore = document.getElementById('finalscore');
 
   let passedtext;
-  if (scores >= passScore) {
+  if (scores >= (Object.keys(sample1dict).length*0.8)) {
     passedtext = "[PASSED]"
   } else {
     passedtext = "[FAILED]"
   }
-  finalscore.innerHTML = `Score = ${scores}/${20}. ${passedtext}`
+  finalscore.innerHTML = `Score = ${scores}/${Object.keys(sample1dict).length}. ${passedtext}`
   finalscore.style.display = "block";
 
 }
