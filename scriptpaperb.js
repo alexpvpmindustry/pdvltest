@@ -151,8 +151,11 @@ async function fetchdataDIPSdataMulti() {
 }
 
 
-function appendDataDIPSdata(data) { 
+function appendDataDIPSdata(data) {
+  console.log("data")
+  console.log(data);
   let qnsss = data.split("\r\n");
+  console.log(qnsss.length)
   for (let ii = 0; ii < qnsss.length; ii++) {
     allans.push(qnsss[ii].split(";")[1])
     DIPSdata.push(qnsss[ii].split(";")[0]);
