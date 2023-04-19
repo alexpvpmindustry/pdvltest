@@ -136,16 +136,21 @@ function fetchdataDIPSdataSingle(file) {
 }
 
 async function fetchdataDIPSdataMulti() {
-  let text0 = await fetch("b1_Driver Improvement Points System (DIPS).txt"); 
-  appendDataDIPSdata(await text0.text())
+  let text0 = await fetch("b1_Driver Improvement Points System (DIPS).txt");
+  let text00 = await text0.text();
+  appendDataDIPSdata(text00)
   let text1 = await fetch("b2_Non DIPS offences.txt"); 
-  appendDataDIPSdata(await text1.text())
-  let text2 = await fetch("b3_Scheduled Offences under VLPS - Private Hire Car and Taxi Drivers.txt"); 
-  appendDataDIPSdata(await text2.text())
+  let text11 = await text1.text();
+  appendDataDIPSdata(text11)
+  let text2 = await fetch("b3_Scheduled Offences under VLPS - Private Hire Car and Taxi Drivers.txt");
+  let text22 = await text2.text();
+  appendDataDIPSdata(text22)
   let text3 = await fetch("b4_Scheduled Offences under VLPS - Private Hire Drivers.txt"); 
-  appendDataDIPSdata(await text3.text())
-  let text4 = await fetch("b5_Conduct Rule Offences (not under VLPS) - Private Hire Car Drivers.txt"); 
-  appendDataDIPSdata(await text4.text())
+  let text33 =await text3.text()
+  appendDataDIPSdata(text33)
+  let text4 = await fetch("b5_Conduct Rule Offences (not under VLPS) - Private Hire Car Drivers.txt");
+  let text44 = await text4.text()
+  appendDataDIPSdata(text44)
   compileDIPSdata();
   displayData();
 }
