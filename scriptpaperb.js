@@ -133,8 +133,8 @@ function fetchdataDIPSdataSingle(file) {
     .catch(function (err) {
       console.log('error: ' + err);
     });
-} 
-let text;
+}
+
 async function fetchdataDIPSdataMulti() {
   let text0 = await fetch("b1_Driver Improvement Points System (DIPS).txt"); 
   appendDataDIPSdata(await text0.text())
