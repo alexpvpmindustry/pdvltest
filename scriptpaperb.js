@@ -64,7 +64,10 @@ function startTest() {
   }
   if (radioval == 4) {
     fetchdataDIPSdataMulti();
-
+  }
+  if (radioval == 5) {
+    shuffle(randomOrder);
+    fetchdataDIPSdataMulti();
   }
   let startbutton = document.getElementById("start");
   startbutton.disabled = true;
@@ -171,10 +174,11 @@ function compileDIPSdata() {// must fill in  ans1dict and sample1dict
   for (let ii = 0; ii < DIPSdata.length; ii++) {
     let ro = [0, 1, 2, 3]; // random order
     shuffle(ro);
-    let as = get4ans(allans[ii]);
+    let i = randomOrder[ii];
+    let as = get4ans(allans[i]);
     let keyy = ro.indexOf(3);
     //console.log(ii+"  "+keyy)
-    sample1dict["Q" + (ii + 1)] = [DIPSdata[ii], as[ro[0]], as[ro[1]], as[ro[2]], as[ro[3]], "Q" + (ii + 1), "Q" + (i + 1)]
+    sample1dict["Q" + (ii + 1)] = [DIPSdata[i], as[ro[0]], as[ro[1]], as[ro[2]], as[ro[3]], "Q" + (ii + 1), "Q" + (i + 1)]
     ans1dict["Q" + (ii + 1)] = [mapped_DISPans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
@@ -193,9 +197,8 @@ function get4ans(ans) { // last element is correct
 function appendData(data) {
   let qnsss = data.split("\n");
   for (let ii = 0; ii < qnsss.length; ii++) {
-    let sep = qnsss[ii].split(";")
-    //console.log(qnum+"  "+sep.length+"  "+sep)
     let i = randomOrder[ii];
+    let sep = qnsss[i].split(";") 
     sample1dict["Q" + (ii + 1)] = [sep[0], sep[1], sep[2], sep[3], sep[4], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
@@ -204,7 +207,7 @@ function appendAnsData(data) {
   let qnsss = data.split("\n");
   for (let ii = 0; ii < qnsss.length; ii++) {
     let i = randomOrder[ii];
-    let keyy = qnsss[ii][0]
+    let keyy = qnsss[i][0]
     //console.log(keyy+mapped_ans[keyy]+(keyy=='A'))
     ans1dict["Q" + (ii + 1)] = [mapped_ans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
   }
