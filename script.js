@@ -183,12 +183,12 @@ function grade() {
   const finalscore = document.getElementById('finalscore');
 
   let passedtext;
-  if (scores >= passScore) {
+  if (scores >= (Object.keys(sample1dict).length*0.8)) {
     passedtext = "[PASSED]"
   } else {
     passedtext = "[FAILED]"
   }
-  finalscore.innerHTML = `Score = ${scores}/${20}. ${passedtext}`
+  finalscore.innerHTML = `Score = ${scores}/${Object.keys(sample1dict).length}. ${passedtext}`
   finalscore.style.display = "block";
 
 }
