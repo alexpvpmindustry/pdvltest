@@ -187,7 +187,7 @@ function get4ans(ans) { // last element is correct
   while (returnans.length != 3) {
     let indexx = Math.floor(Math.random() * 20);
     let wrongans = setAllAns[indexx];
-    if (wrongans != ans) {
+    if ((wrongans != ans) && !(returnans.includes(wrongans))) {
       returnans.push(wrongans);
     }
   }
