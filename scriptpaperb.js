@@ -1,6 +1,7 @@
 let endedTest = false;
 let endTime;
-let mapped_ans = {'A':"A1",'B':"A2",'C':"A3",'D':"A4"};
+let mapped_ans = { 'A': "A1", 'B': "A2", 'C': "A3", 'D': "A4" };
+let mapped_DISPans = { 0: "A1", 1: "A2", 2: "A3", 3: "A4" };
 function startTimer() {
   var countDownDate = new Date().getTime() + 2000 + 30 * 60 * 1000; // 30 minutes from now
   //var countDownDate = new Date().getTime() + 4000 ;//+ 30 * 60 * 1000; // 4 sec
@@ -19,15 +20,22 @@ function startTimer() {
   }, 100);
 }
 function shuffle(array) {
-  let currentIndex = array.length, randomIndex; 
-  while (currentIndex != 0) { 
+  let currentIndex = array.length, randomIndex;
+  while (currentIndex != 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--; 
+    currentIndex--;
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]];
   }
   return array;
 }
+let sample1dict = {};
+let ans1dict = {};
+let passScore = 17;
+// for DIPS scores
+let DIPSdata = [];
+let allans = [];
+let setAllAns;
 
 let randomOrder = Array(109).fill().map((x, i) => i);
 function startTest() {
@@ -56,6 +64,8 @@ function startTest() {
   }
   if (radioval == 4) {
     fetchdataDIPSdataMulti();
+    compileDIPSdata();
+    displayData();
   }
   let startbutton = document.getElementById("start");
   startbutton.disabled = true;
@@ -95,12 +105,10 @@ class Qn {
   }
 }
 
-let sample1dict = {};
-let ans1dict = {};
-let passScore = 17;
+
 function fetchdata(file, ans) {
   fetch(file)
-    .then(function (response) { 
+    .then(function (response) {
       return response.text();
     })
     .then(function (data) {
@@ -111,42 +119,68 @@ function fetchdata(file, ans) {
         appendAnsData(data);
       }
     })
-    .catch(function (err) { 
+    .catch(function (err) {
       console.log('error: ' + err);
     });
 }
-function fetchdataDIPSdataSingle(file){
+function fetchdataDIPSdataSingle(file) {
   fetch(file)
-  .then(function (response) { 
-    return response.text();
-  })
-  .then(function (data) { 
-    appendDataDIPSdata(data); 
-  })
-  .catch(function (err) { 
-    console.log('error: ' + err);
-  });
-}
-function fetchdataDIPSdataMulti(){
-  fetchdataDIPSdataSingle("Driver Improvement Points System (DIPS).txt");
-  fetchdataDIPSdataSingle("Non DIPS offences.txt");
-  fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Car and Taxi Drivers.txt");
-  fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Drivers.txt");
-  fetchdataDIPSdataSingle("Conduct Rule Offences (not under VLPS) - Private Hire Car Drivers.txt");
-  console.log(DIPSdata);
-  displayData(); 
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (data) {
+      appendDataDIPSdata(data);
+    })
+    .catch(function (err) {
+      console.log('error: ' + err);
+    });
+} 
+
+async function fetchdataDIPSdataMulti() {
+  //await fetchdataDIPSdataSingle("Driver Improvement Points System (DIPS).txt");
+  await fetchdataDIPSdataSingle("Non DIPS offences.txt");
+  //await fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Car and Taxi Drivers.txt");
+  //await fetchdataDIPSdataSingle("Scheduled Offences under VLPS - Private Hire Drivers.txt");
+  //await fetchdataDIPSdataSingle("Conduct Rule Offences (not under VLPS) - Private Hire Car Drivers.txt"); 
+  // compileDIPSdata();
+  // displayData();
 }
 
-let DIPSdata=[];
-function appendDataDIPSdata(data){
+
+function appendDataDIPSdata(data) {
   let qnsss = data.split("\r\n");
   for (let ii = 0; ii < qnsss.length; ii++) {
-    DIPSdata.push(qnsss[ii]);
+    allans.push(qnsss[ii].split(";")[1])
+    DIPSdata.push(qnsss[ii].split(";")[0]);
   }
+}
+function compileDIPSdata() {// must fill in  ans1dict and sample1dict
+  setAllAns = Array.from(new Set(allans));
+  console.log("starting compile with "+setAllAns.length)
+  for (let ii = 0; ii < DIPSdata.length; ii++) {
+    let ro = [0, 1, 2, 3]; // random order
+    shuffle(ro);
+    let as = get4ans(allans[ii]);
+    let keyy = ro.indexOf(3);
+    sample1dict["Q" + (ii + 1)] = [DIPSdata[ii], as[ro[0]], as[ro[1]], as[ro[2]], as[ro[3]], "Q" + (ii + 1), "Q" + (i + 1)]
+    ans1dict["Q" + (ii + 1)] = [mapped_DISPans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
+  }
+}
+function get4ans(ans) { // last element is correct
+  let returnans = [];
+  while (returnans.length != 3) {
+    let indexx = Math.floor(Math.random() * 20);
+    let wrongans = setAllAns[indexx];
+    if (wrongans != ans) {
+      returnans.push(wrongans);
+    }
+  }
+  returnans.push(ans);
+  return returnans
 }
 function appendData(data) {
   let qnsss = data.split("\n");
-  for (let ii = 0; ii < qnsss.length; ii++) { 
+  for (let ii = 0; ii < qnsss.length; ii++) {
     let sep = qnsss[ii].split(";")
     //console.log(qnum+"  "+sep.length+"  "+sep)
     let i = randomOrder[ii];
@@ -160,7 +194,7 @@ function appendAnsData(data) {
     let i = randomOrder[ii];
     let keyy = qnsss[ii][0]
     //console.log(keyy+mapped_ans[keyy]+(keyy=='A'))
-    ans1dict["Q" + (ii + 1)] = [ mapped_ans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
+    ans1dict["Q" + (ii + 1)] = [mapped_ans[keyy], "Q" + (ii + 1), "Q" + (i + 1)]
   }
 }
 function displayData() {
@@ -188,7 +222,7 @@ function grade() {
   endedTest = true;
   const children = document.querySelectorAll('.question');
   children.forEach((node, index) => {
-    let correct = false; let realans = ans1dict["Q" + (index + 1)][0]; 
+    let correct = false; let realans = ans1dict["Q" + (index + 1)][0];
     let varr = node.children[0].children[0].children;
     for (var childi = 0; childi < varr.length; childi++) {
       let child = varr[childi]
@@ -232,12 +266,12 @@ function grade() {
 
 }
 
-function docEleDiv(strr){
+function docEleDiv(strr) {
   let ele = document.createElement("div");
-  ele.innerHTML=strr;
+  ele.innerHTML = strr;
   return ele;
 }
-function getLinks(){
+function getLinks() {
   let links = {};
   links["./pdvlA.html"] = "PDVL Paper A, mock Exam.";
   links["./top10tipsandtricks.html"] = "Top 10 tips and tricks to pass your PDVL exam.";
@@ -291,9 +325,9 @@ function addTagsToRandomWord(sentence, linkkk) {
 
 function fillfootercontent(maxlinks) {
   let ftc = document.getElementById("footercontent");
-  let linklist =getLinks();
-  let links = selectElements(linklist,maxlinks);
-  let headerr= docEleDiv(`<h3>Suggested pages</h3>`);
+  let linklist = getLinks();
+  let links = selectElements(linklist, maxlinks);
+  let headerr = docEleDiv(`<h3>Suggested pages</h3>`);
   ftc.append(headerr);
   for (var key in links) {
     let sb = document.createElement("div");
@@ -303,8 +337,8 @@ function fillfootercontent(maxlinks) {
     //sb.innerHTML = str+` <a href=${key} style="color: #01af74;">${links[key].substring(lastIndex)}</a>`;
     sb.innerHTML = addTagsToRandomWord(str, key)
     ftc.append(sb);
-  } 
-  let headerr2= docEleDiv(`<br><h3> </h3><img src="icons3.png" style="width:45vw; max-width: 40%;" alt="social media icons">`);
+  }
+  let headerr2 = docEleDiv(`<br><h3> </h3><img src="icons3.png" style="width:45vw; max-width: 40%;" alt="social media icons">`);
   ftc.append(headerr2);
   let social0 = docEleDiv(`
   <p>Support our work. Buy us a <a href="https://www.buymeacoffee.com/alexservers"
